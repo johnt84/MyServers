@@ -274,6 +274,7 @@
     <None Include="Connected Services\MyServersApiSimulatorService\Simulator3.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Properties\PublishProfiles\MyServers - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Networking\ForwardDns.aspx" />
     <Content Include="Networking\ReverseDns.aspx" />
