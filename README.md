@@ -1,4 +1,4 @@
-# MyServers
+# My Servers Web Application
 
 Simple web application to manage a list of servers
 
