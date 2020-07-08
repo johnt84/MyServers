@@ -3,7 +3,7 @@
 <asp:Content ID="PageBodyContent" ContentPlaceHolderID="MainContent" runat="Server">  
     <link rel="stylesheet" type="text/css" href="/Styles/jquery.dataTables.css">
 
-    <div style="width: 1024px;" runat="server">
+    <div style="width: 1024px; font-size: 14px;" runat="server">
         <h1 style="padding-top: 20px;"><%= Page.Title %></h1>
         <asp:Repeater ID="rptServerList" runat="server" ItemType="MyServersWebApp.MyServersApiSimulatorService.ServerInfo">
             <HeaderTemplate>
@@ -16,6 +16,7 @@
                             <th style="width: 170px">Location</th>
                             <th style="width: 95px">Your Reference</th>
                             <th style="width: 60px">Status</th>
+                            <th style="width: 80px">Is Suspended</th>
                         </tr>
                     </thead>
             </HeaderTemplate>
@@ -38,6 +39,9 @@
                     </td>
                     <td>
                         <%# Item.Status %>
+                    </td>
+                    <td>
+                        <%# Item.Suspended ? "Yes" : "No"  %>
                     </td>
                 </tr>
             </ItemTemplate>

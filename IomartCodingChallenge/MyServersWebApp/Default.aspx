@@ -4,7 +4,7 @@
 
     <h2>My Servers Web App</h2>
 
-    <ul>
+    <ul style="font-size: 18px">
         <li>View the list of servers using the <a href="Server/ServerList">Server List page</a></li>
         <li>View the list of Forward DNS Entries using the <a href="Networking/ForwardDNS">Forward Dns page</a></li>
         <li>View the list of Reverse DNS Entries using the <a href="Networking/ReverseDNS">Reverse DNS page</a></li>

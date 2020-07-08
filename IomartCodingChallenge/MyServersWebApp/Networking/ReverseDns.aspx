@@ -3,7 +3,7 @@
 <asp:Content ID="PageBodyContent" ContentPlaceHolderID="MainContent" runat="Server">  
     <link rel="stylesheet" type="text/css" href="/Styles/jquery.dataTables.css">
 
-    <div style="width: 500px;" runat="server">
+    <div style="width: 500px; font-size: 14px;" runat="server">
         <h1 style="padding-top: 20px;"><%= Page.Title %></h1>
         <asp:Repeater ID="rptReverseDns" runat="server" ItemType="MyServersWebApp.MyServersApiSimulatorService.ReverseDnsEntry">
             <HeaderTemplate>

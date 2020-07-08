@@ -9,7 +9,8 @@ namespace MyServersWebApp.Server
         protected string serviceID;
         protected ServerInfo serverDetails;
         private ServerService serverService;
-        protected bool serviceExists;
+        protected bool isError;
+        protected bool actionCompleted;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,27 +20,56 @@ namespace MyServersWebApp.Server
 
             if (string.IsNullOrEmpty(serviceID))
             {
-                serviceExists = false;
+                DisplayErrorMessage("Please provide a valid Service ID");
                 divMain.Visible = false;
-                lbErrorMessage.Text = "Please provide a valid Service ID";
                 return;
             }
 
             serverService = new ServerService();
-            serverDetails = serverService.GetServerDetails(serviceID);
 
-            if (string.IsNullOrEmpty(serverDetails.ServiceID))
+            if (!Page.IsPostBack)
             {
-                serviceExists = false;
-                divMain.Visible = false;
-                lbErrorMessage.Text = $"No server exists with the Service ID of {serviceID}";
-                return;
+                PopulatePage();
+
+                if (string.IsNullOrEmpty(serverDetails.ServiceID))
+                {
+                    DisplayErrorMessage($"No server exists with the Service ID of {serviceID}");
+                    divMain.Visible = false;
+                    return;
+                }
             }
 
-            lbErrorMessage.Text = string.Empty;
+            InitialisePage();
+        }
 
-            serviceExists = true;
-            divMain.Visible = true;
+        protected void btnSuspendServer_Click(object sender, EventArgs e)
+        {
+            string suspendResult = serverService.SuspendServer(serviceID, txtSuspensionReason.Text);
+
+            if (!string.IsNullOrEmpty(suspendResult))
+            {
+                DisplayErrorMessage(suspendResult);
+            }
+            else
+            {
+                ActionCompleted("Server suspended successfully");
+            }
+
+            PopulatePage();
+        }
+
+        protected void btnUnsuspendServer_Click(object sender, EventArgs e)
+        {
+            string unsuspendResult = serverService.UnsuspendServer(serviceID);
+
+            if(!string.IsNullOrEmpty(unsuspendResult))
+            {
+                DisplayErrorMessage(unsuspendResult);
+            }
+            else
+            {
+                ActionCompleted("Server unsuspended successfully");
+            }
 
             PopulatePage();
         }
@@ -49,9 +79,34 @@ namespace MyServersWebApp.Server
             rptServerStatus.DataSource = serverService.GetServerStatus(serviceID);
             rptServerStatus.DataBind();
 
+            serverDetails = serverService.GetServerDetails(serviceID);
+
             lbYourReference.Text = serverDetails.YourReference;
             lbLocation.Text = serverDetails.Location;
             lbPrimaryIP.Text = serverDetails.PrimaryIP;
+            lbIsSuspended.Text = serverDetails.Suspended ? "Yes" : "No";
+        }
+
+        private void InitialisePage()
+        {
+            lbErrorMessage.Text = string.Empty;
+            lbInformationMesage.Text = string.Empty;
+
+            isError = false;
+            actionCompleted = false;
+            divMain.Visible = true;
+        }
+
+        private void ActionCompleted(string informationMessage)
+        {
+            lbInformationMesage.Text = informationMessage;
+            actionCompleted = true;
+        }
+
+        private void DisplayErrorMessage(string errorMessage)
+        {
+            lbErrorMessage.Text = errorMessage;
+            isError = true;
         }
     }
 }
