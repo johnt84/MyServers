@@ -1,4 +1,5 @@
 ﻿using MyServersWebApp.MyServersApiSimulatorService;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -13,12 +14,26 @@ namespace MyServersWebApp.Data
 
         public List<CurrentMonitorStatus> GetServerStatus(string serviceID)
         {
-            return GlobalSettings.apiClient.GetServerStatus(GlobalSettings.authInfo, serviceID).ToList();
+            try
+            {
+                return GlobalSettings.apiClient.GetServerStatus(GlobalSettings.authInfo, serviceID).ToList();
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
         }
 
         public ServerInfo GetServerDetails(string serviceID)
         {
-            return GlobalSettings.apiClient.GetServerDetails(GlobalSettings.authInfo, serviceID);
+            try
+            {
+                return GlobalSettings.apiClient.GetServerDetails(GlobalSettings.authInfo, serviceID);
+            }
+            catch (Exception ex)
+            {
+                return new ServerInfo();
+            }
         }
     }
 }

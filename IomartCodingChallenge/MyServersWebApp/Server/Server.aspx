@@ -4,11 +4,11 @@
     <link rel="stylesheet" type="text/css" href="/Styles/jquery.dataTables.css">
 
     <%
-    if(string.IsNullOrEmpty(serviceID))
+    if(!serviceExists)
     { %>
         <div style="color:red; padding-top: 20px" padding-bottom: 20px">
             <ul>
-                <li>Cannot view the Server</li>
+                <li><asp:Label ID="lbErrorMessage" runat="server"></asp:Label></li>
             </ul>
         </div>
     <% 

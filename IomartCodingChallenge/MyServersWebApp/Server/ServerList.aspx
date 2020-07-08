@@ -22,7 +22,7 @@
             <ItemTemplate>
                 <tr class="nowrap">
                     <td>
-                        <a href="/server/server/?serviceid=<%# Item.ServiceID %>"><%# Item.ServiceID %></a>
+                        <a href="/server/server?serviceid=<%# Item.ServiceID %>"><%# Item.ServiceID %></a>
                     </td>
                     <td>
                         <%# Item.ServiceType %>

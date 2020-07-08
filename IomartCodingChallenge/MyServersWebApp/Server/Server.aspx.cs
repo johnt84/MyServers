@@ -8,6 +8,8 @@ namespace MyServersWebApp.Server
     {
         protected string serviceID;
         protected ServerInfo serverDetails;
+        private ServerService serverService;
+        protected bool serviceExists;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,10 +19,26 @@ namespace MyServersWebApp.Server
 
             if (string.IsNullOrEmpty(serviceID))
             {
+                serviceExists = false;
                 divMain.Visible = false;
+                lbErrorMessage.Text = "Please provide a valid Service ID";
                 return;
             }
 
+            serverService = new ServerService();
+            serverDetails = serverService.GetServerDetails(serviceID);
+
+            if (string.IsNullOrEmpty(serverDetails.ServiceID))
+            {
+                serviceExists = false;
+                divMain.Visible = false;
+                lbErrorMessage.Text = $"No server exists with the Service ID of {serviceID}";
+                return;
+            }
+
+            lbErrorMessage.Text = string.Empty;
+
+            serviceExists = true;
             divMain.Visible = true;
 
             PopulatePage();
@@ -28,12 +46,8 @@ namespace MyServersWebApp.Server
 
         private void PopulatePage()
         {
-            var serverService = new ServerService();
-
             rptServerStatus.DataSource = serverService.GetServerStatus(serviceID);
             rptServerStatus.DataBind();
-
-            serverDetails = serverService.GetServerDetails(serviceID);
 
             lbYourReference.Text = serverDetails.YourReference;
             lbLocation.Text = serverDetails.Location;
