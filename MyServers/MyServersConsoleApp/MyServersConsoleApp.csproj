@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{332FF0DC-D3F4-4289-9DDC-D6EC8CC40C1A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyServersConsoleApp</RootNamespace>
+    <AssemblyName>MyServersConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\MyServersApiSimulatorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersApiSimulator.wsdl" />
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.AccountSummary.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.AlertInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.AvailableLicenceType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.BandwidthReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.Basket.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.BasketItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ChassisForSale.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ChassisGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ClientInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.Cost.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.CurrentMonitorStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.DomainAvailability.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.DomainContact.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.FAQ.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.FAQQuestion.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.FAQSection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.HostedDomainInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.HostedDomainRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.InvoiceHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.InvoiceItem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.IPInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.IPRequestStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.IPSafeListEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.Licence.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.Message.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.MonthlyBandwidthReportEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.NICInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.NullRoute.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ProductInfoField.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ProductOption.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ProductOptionGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ProductRule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ProductType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.RecoverySessionDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.RequestStatus.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ReverseDnsEntry.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ServerCredential.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.ServerInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.SubnetInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.TestResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\MyServersConsoleApp.MyServersApiSimulatorService.TopLevelDomain.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\Simulator.wsdl" />
+    <None Include="Connected Services\MyServersApiSimulatorService\Simulator.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\Simulator1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\Simulator2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\MyServersApiSimulatorService\Simulator3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\MyServersApiSimulatorService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MyServersApiSimulatorService\Simulator.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MyServersApiSimulatorService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MyServersApiSimulatorService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\MyServersApiSimulatorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
