@@ -24,6 +24,15 @@ namespace MyServersWebApp.Server
         protected global::System.Web.UI.WebControls.Label lbErrorMessage;
 
         /// <summary>
+        /// lbInformationMesage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbInformationMesage;
+
+        /// <summary>
         /// divMain control.
         /// </summary>
         /// <remarks>
@@ -67,5 +76,41 @@ namespace MyServersWebApp.Server
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lbPrimaryIP;
+
+        /// <summary>
+        /// lbIsSuspended control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbIsSuspended;
+
+        /// <summary>
+        /// btnUnSuspendServer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnUnSuspendServer;
+
+        /// <summary>
+        /// txtSuspensionReason control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSuspensionReason;
+
+        /// <summary>
+        /// btnSuspendServer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSuspendServer;
     }
 }

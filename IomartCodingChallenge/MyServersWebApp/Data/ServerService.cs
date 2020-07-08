@@ -35,5 +35,15 @@ namespace MyServersWebApp.Data
                 return new ServerInfo();
             }
         }
+
+        public void SuspendServer(string serviceID, string suspensionReason)
+        {
+            GlobalSettings.apiClient.SuspendServer(GlobalSettings.authInfo, serviceID, suspensionReason);
+        }
+
+        public void UnsuspendServer(string serviceID)
+        {
+            GlobalSettings.apiClient.UnsuspendServer(GlobalSettings.authInfo, serviceID);
+        }
     }
 }

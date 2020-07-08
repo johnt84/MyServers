@@ -6,7 +6,7 @@
     <%
     if(!serviceExists)
     { %>
-        <div style="color:red; padding-top: 20px" padding-bottom: 20px">
+        <div style="color:red; padding-top: 20px; font-size: 18px;" padding-bottom: 20px">
             <ul>
                 <li><asp:Label ID="lbErrorMessage" runat="server"></asp:Label></li>
             </ul>
@@ -15,12 +15,22 @@
     }
     %>
 
-    <div id="divMain" style="width: 1024px; padding-bottom: 20px" runat="server">
-        <h1 style="padding-top: 20px"><%= Page.Title %></h1>
+    <%
+    if (actionCompleted)
+    {
+     %>
+        <div style="color:blue; padding-top: 20px; font-size: 18px;" padding-bottom: 20px">
+            <ul>
+                <li><asp:Label ID="lbInformationMesage" runat="server"></asp:Label></li>
+            </ul>
+        </div>
+    <%    
+    }
+   %>
 
-        <h3>Monitoring</h3>
-        <a href="/server/tests/?serviceid=<%# serviceID %>">Tests</a>
-        <a href="/server/alerts/?serviceid=<%# serviceID %>">Alerts</a>
+
+    <div id="divMain" style="width: 1024px; font-size: 14px; padding-bottom: 20px" runat="server">
+        <h1 style="padding-top: 20px"><%= Page.Title %></h1>
 
         <h3>Service Status</h3>
 
@@ -81,7 +91,43 @@
 			        <td>Primary IP:</td>
 			        <td><asp:Label ID="lbPrimaryIP" runat="server"></asp:Label></td>
 		        </tr>
+                 <tr>
+			        <td>Is Suspended:</td>
+			        <td><asp:Label ID="lbIsSuspended" runat="server"></asp:Label></td>
+		        </tr>
 	        </table>
+        </div>
+
+        <div style="padding-top: 35px">
+        <%
+            if(serverDetails.Suspended)
+            {
+            %>
+                <asp:Button ID="btnUnSuspendServer" runat="server" Text="Unsuspend Server" OnClick="btnUnsuspendServer_Click" />        
+            <%
+            }
+            else
+            {
+            %>
+                <table style="padding-bottom: 58px;">
+                    <tr>
+                        <td style="padding-right: 20px;">
+                            Suspension Reason:
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtSuspensionReason" runat="server" TextMode="MultiLine"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><asp:Button ID="btnSuspendServer" runat="server" Text="Suspend Server" OnClick="btnSuspendServer_Click" />   </td>
+                    </tr>
+                </table>        
+            <% 
+            }
+            %>     
         </div>
     </div>
 

@@ -10,6 +10,7 @@ namespace MyServersWebApp.Server
         protected ServerInfo serverDetails;
         private ServerService serverService;
         protected bool serviceExists;
+        protected bool actionCompleted;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -26,20 +27,42 @@ namespace MyServersWebApp.Server
             }
 
             serverService = new ServerService();
-            serverDetails = serverService.GetServerDetails(serviceID);
 
-            if (string.IsNullOrEmpty(serverDetails.ServiceID))
+            if (!Page.IsPostBack)
             {
-                serviceExists = false;
-                divMain.Visible = false;
-                lbErrorMessage.Text = $"No server exists with the Service ID of {serviceID}";
-                return;
+                PopulatePage();
+
+                if (string.IsNullOrEmpty(serverDetails.ServiceID))
+                {
+                    serviceExists = false;
+                    divMain.Visible = false;
+                    lbErrorMessage.Text = $"No server exists with the Service ID of {serviceID}";
+                    return;
+                }
             }
 
             lbErrorMessage.Text = string.Empty;
+            lbInformationMesage.Text = string.Empty;
 
             serviceExists = true;
+            actionCompleted = false;
             divMain.Visible = true;
+        }
+
+        protected void btnSuspendServer_Click(object sender, EventArgs e)
+        {
+            serverService.SuspendServer(serviceID, txtSuspensionReason.Text);
+
+            ActionCompleted("Server suspended successfully");
+
+            PopulatePage();
+        }
+
+        protected void btnUnsuspendServer_Click(object sender, EventArgs e)
+        {
+            serverService.UnsuspendServer(serviceID);
+
+            ActionCompleted("Server unsuspended successfully");
 
             PopulatePage();
         }
@@ -49,9 +72,18 @@ namespace MyServersWebApp.Server
             rptServerStatus.DataSource = serverService.GetServerStatus(serviceID);
             rptServerStatus.DataBind();
 
+            serverDetails = serverService.GetServerDetails(serviceID);
+
             lbYourReference.Text = serverDetails.YourReference;
             lbLocation.Text = serverDetails.Location;
             lbPrimaryIP.Text = serverDetails.PrimaryIP;
+            lbIsSuspended.Text = serverDetails.Suspended ? "Yes" : "No";
+        }
+
+        private void ActionCompleted(string informationMessage)
+        {
+            lbInformationMesage.Text = informationMessage;
+            actionCompleted = true;
         }
     }
 }
