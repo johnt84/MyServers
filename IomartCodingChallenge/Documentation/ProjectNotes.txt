@@ -1,0 +1,9 @@
+1) Created a Console App (.Net Framework) - Done
+2) Added Service Reference to the soap api client (https://api.rapidswitch.com/MyServersApi/Simulator.svc?wsdl)  - Done
+3) Reversed engineered php app - Done
+4) Developed a console app which contains all soap calls required for new app based on reverse engineering - Done
+5) Create a web app with web forms with mock data on pages - Done
+6) Create a service classes to connect with soap service but uses mock data to begin with and connect to web forms - Done
+7) Change servee class to use soap service - Done
+8) Create login
+9) Consider connecting to a database with stored procedures?

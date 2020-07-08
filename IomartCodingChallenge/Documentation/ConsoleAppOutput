@@ -1,0 +1,3299 @@
+Server 1
+Service ID: TEST-00001
+Service type field: Dedi
+Primary IP: 10.0.0.1
+Location: A1 @ RapidSwitch Test
+Your reference: Dedi-1
+Status: OK
+
+Service Statuses
+
+Server status 1
+Status code: OK
+Test Id: 1
+Test name: Connectivity
+Test arg1:
+Monitored Ip: 10.0.0.1
+Last updated: 05 Jul 2020
+
+Server status 2
+Status code: Warning
+Test Id: 2
+Test name: SwitchPorts
+Test arg1:
+Monitored Ip: 10.0.0.1
+Last updated: 05 Jul 2020
+
+Server status 3
+Status code: OK
+Test Id: 7
+Test name: Switch Ports
+Test arg1:
+Monitored Ip:
+Last updated: 05 Jul 2020
+
+Server details
+
+Bandwidth url base: https://myservers.rapidswitch.com/Api/SampleBW.png?graphkey=xxxxxxxx
+Your reference: Dedi-1
+Location: A1 @ RapidSwitch Test
+Primary IP: 10.0.0.1
+Service description: First RapidSwitch Test Server
+Dedicated Server
+
+Test types
+
+Test type 1
+Test type: Connectivity
+
+Test type 2
+Test type: Http
+
+Test type 3
+Test type: SSH
+
+Test type 4
+Test type: RDP
+
+Test type 5
+Test type: Telnet
+
+Test type 6
+Test type: SMTP
+
+Test type 7
+Test type: TCPPortOpen
+
+Test type 8
+Test type: DoNotMonitor
+
+Test type 9
+Test type: SwitchPort
+
+Test type 10
+Test type: ChassisStatus
+
+Test type 11
+Test type: RaidStatus
+
+Test type 12
+Test type: CustomSnmp
+
+Alerts
+
+Alert 1
+Alert type: Email
+Destination: test@api.rapidswitch.com
+Initial delay: 15
+Repeat delay: 120
+Alert on failure: Fail
+
+Alert 2
+Alert type: SMS
+Destination: 07877555555
+Initial delay: 20
+Repeat delay: 120
+Alert on failure: Fail
+
+Alert 3
+Alert type: POWERCYCLE
+Destination: test@api.rapidswitch.com
+Initial delay: 30
+Repeat delay: 120
+Alert on failure: Fail
+
+Alert 4
+Alert type: SMS
+Destination: +441234567890
+Initial delay: 5
+Repeat delay: 15
+Alert on failure:
+
+Bandwidth reports
+
+Last 4 Hours
+BW4h In: 719863374
+BW4h Out: 861119797
+BW4h Total: 1580983171
+
+Last 24 Hours
+BW24h In: 956975084
+BW24h Out: 890451132
+BW24h Total: 1847426216
+
+So far this month
+BW so far this month in: 379884074
+BW so far this month out: 32094163
+BW so far this month total: 411978237
+
+Predicted this month (24h)
+BW predicted 24h in: 643623592
+BW predicted 24h out: 758142222
+BW predicted 24h total: 1401765814
+
+Predicted this month (14d)
+BW predicted 24h in: 107592048
+BW predicted 24h out: 261079299
+BW predicted 24h total: 368671347
+
+Monthly Bandwidth Reports
+
+Monthly bandwidth report 1
+Month: Jan 2009
+BW in: 794621010
+BW out: 982790839
+BW total: 1777411849
+BW 95th percentile: 0
+
+Monthly bandwidth report 2
+Month: Feb 2009
+BW in: 385847912
+BW out: 760207133
+BW total: 1146055045
+BW 95th percentile: 0
+
+Monthly bandwidth report 3
+Month: Mar 2009
+BW in: 577133760
+BW out: 1030619010
+BW total: 1607752770
+BW 95th percentile: 0
+
+Monthly bandwidth report 4
+Month: Apr 2009
+BW in: 568894676
+BW out: 644439812
+BW total: 1213334488
+BW 95th percentile: 0
+
+Monthly bandwidth report 5
+Month: May 2009
+BW in: 297745718
+BW out: 98912893
+BW total: 396658611
+BW 95th percentile: 0
+
+Monthly bandwidth report 6
+Month: Jun 2009
+BW in: 107280492
+BW out: 426390815
+BW total: 533671307
+BW 95th percentile: 0
+
+Monthly bandwidth report 7
+Month: Jul 2009
+BW in: 709288713
+BW out: 993862077
+BW total: 1703150790
+BW 95th percentile: 0
+
+Monthly bandwidth report 8
+Month: Aug 2009
+BW in: 31742915
+BW out: 409940566
+BW total: 441683481
+BW 95th percentile: 0
+
+Monthly bandwidth report 9
+Month: Sep 2009
+BW in: 799205992
+BW out: 684780967
+BW total: 1483986959
+BW 95th percentile: 0
+
+Monthly bandwidth report 10
+Month: Oct 2009
+BW in: 556874172
+BW out: 472119584
+BW total: 1028993756
+BW 95th percentile: 0
+
+Monthly bandwidth report 11
+Month: Nov 2009
+BW in: 629200823
+BW out: 90970102
+BW total: 720170925
+BW 95th percentile: 0
+
+Monthly bandwidth report 12
+Month: Dec 2009
+BW in: 908406983
+BW out: 864104651
+BW total: 1772511634
+BW 95th percentile: 0
+
+Monthly bandwidth report 13
+Month: Jan 2010
+BW in: 499445000
+BW out: 51031399
+BW total: 550476399
+BW 95th percentile: 0
+
+Monthly bandwidth report 14
+Month: Feb 2010
+BW in: 421523156
+BW out: 258160755
+BW total: 679683911
+BW 95th percentile: 0
+
+Monthly bandwidth report 15
+Month: Mar 2010
+BW in: 671522976
+BW out: 925301734
+BW total: 1596824710
+BW 95th percentile: 0
+
+Monthly bandwidth report 16
+Month: Apr 2010
+BW in: 826475928
+BW out: 657577203
+BW total: 1484053131
+BW 95th percentile: 0
+
+Monthly bandwidth report 17
+Month: May 2010
+BW in: 918402217
+BW out: 276970223
+BW total: 1195372440
+BW 95th percentile: 0
+
+Monthly bandwidth report 18
+Month: Jun 2010
+BW in: 722648047
+BW out: 688236287
+BW total: 1410884334
+BW 95th percentile: 0
+
+Monthly bandwidth report 19
+Month: Jul 2010
+BW in: 536495303
+BW out: 560919113
+BW total: 1097414416
+BW 95th percentile: 0
+
+Monthly bandwidth report 20
+Month: Aug 2010
+BW in: 904201501
+BW out: 358778938
+BW total: 1262980439
+BW 95th percentile: 0
+
+Monthly bandwidth report 21
+Month: Sep 2010
+BW in: 190293062
+BW out: 713495493
+BW total: 903788555
+BW 95th percentile: 0
+
+Monthly bandwidth report 22
+Month: Oct 2010
+BW in: 1002048180
+BW out: 850449175
+BW total: 1852497355
+BW 95th percentile: 0
+
+Monthly bandwidth report 23
+Month: Nov 2010
+BW in: 396271911
+BW out: 293472559
+BW total: 689744470
+BW 95th percentile: 0
+
+Monthly bandwidth report 24
+Month: Dec 2010
+BW in: 151831083
+BW out: 1036854830
+BW total: 1188685913
+BW 95th percentile: 0
+
+Monthly bandwidth report 25
+Month: Jan 2011
+BW in: 858708216
+BW out: 1043685330
+BW total: 1902393546
+BW 95th percentile: 0
+
+Monthly bandwidth report 26
+Month: Feb 2011
+BW in: 306629994
+BW out: 496552904
+BW total: 803182898
+BW 95th percentile: 0
+
+Monthly bandwidth report 27
+Month: Mar 2011
+BW in: 777946950
+BW out: 171504007
+BW total: 949450957
+BW 95th percentile: 0
+
+Monthly bandwidth report 28
+Month: Apr 2011
+BW in: 128941398
+BW out: 703650908
+BW total: 832592306
+BW 95th percentile: 0
+
+Monthly bandwidth report 29
+Month: May 2011
+BW in: 74383855
+BW out: 595485083
+BW total: 669868938
+BW 95th percentile: 0
+
+Monthly bandwidth report 30
+Month: Jun 2011
+BW in: 260762132
+BW out: 526102361
+BW total: 786864493
+BW 95th percentile: 0
+
+Monthly bandwidth report 31
+Month: Jul 2011
+BW in: 609095853
+BW out: 310733920
+BW total: 919829773
+BW 95th percentile: 0
+
+Monthly bandwidth report 32
+Month: Aug 2011
+BW in: 1046658658
+BW out: 446185807
+BW total: 1492844465
+BW 95th percentile: 0
+
+Monthly bandwidth report 33
+Month: Sep 2011
+BW in: 346178788
+BW out: 523445111
+BW total: 869623899
+BW 95th percentile: 0
+
+Monthly bandwidth report 34
+Month: Oct 2011
+BW in: 581730420
+BW out: 432318489
+BW total: 1014048909
+BW 95th percentile: 0
+
+Monthly bandwidth report 35
+Month: Nov 2011
+BW in: 271214029
+BW out: 417248451
+BW total: 688462480
+BW 95th percentile: 0
+
+Monthly bandwidth report 36
+Month: Dec 2011
+BW in: 947187086
+BW out: 238286878
+BW total: 1185473964
+BW 95th percentile: 0
+
+Monthly bandwidth report 37
+Month: Jan 2012
+BW in: 854321289
+BW out: 198095233
+BW total: 1052416522
+BW 95th percentile: 0
+
+Monthly bandwidth report 38
+Month: Feb 2012
+BW in: 281826521
+BW out: 989447152
+BW total: 1271273673
+BW 95th percentile: 0
+
+Monthly bandwidth report 39
+Month: Mar 2012
+BW in: 162663744
+BW out: 57957808
+BW total: 220621552
+BW 95th percentile: 0
+
+Monthly bandwidth report 40
+Month: Apr 2012
+BW in: 467832740
+BW out: 205972441
+BW total: 673805181
+BW 95th percentile: 0
+
+Monthly bandwidth report 41
+Month: May 2012
+BW in: 972942138
+BW out: 458410149
+BW total: 1431352287
+BW 95th percentile: 0
+
+Monthly bandwidth report 42
+Month: Jun 2012
+BW in: 473194362
+BW out: 701579469
+BW total: 1174773831
+BW 95th percentile: 0
+
+Monthly bandwidth report 43
+Month: Jul 2012
+BW in: 618671739
+BW out: 329923024
+BW total: 948594763
+BW 95th percentile: 0
+
+Monthly bandwidth report 44
+Month: Aug 2012
+BW in: 953372076
+BW out: 746898209
+BW total: 1700270285
+BW 95th percentile: 0
+
+Monthly bandwidth report 45
+Month: Sep 2012
+BW in: 148028824
+BW out: 18997139
+BW total: 167025963
+BW 95th percentile: 0
+
+Monthly bandwidth report 46
+Month: Oct 2012
+BW in: 613852431
+BW out: 1014752043
+BW total: 1628604474
+BW 95th percentile: 0
+
+Monthly bandwidth report 47
+Month: Nov 2012
+BW in: 300156981
+BW out: 378099139
+BW total: 678256120
+BW 95th percentile: 0
+
+Monthly bandwidth report 48
+Month: Dec 2012
+BW in: 823424908
+BW out: 953300965
+BW total: 1776725873
+BW 95th percentile: 0
+
+Monthly bandwidth report 49
+Month: Jan 2013
+BW in: 740578658
+BW out: 555862373
+BW total: 1296441031
+BW 95th percentile: 0
+
+Monthly bandwidth report 50
+Month: Feb 2013
+BW in: 504270386
+BW out: 946568622
+BW total: 1450839008
+BW 95th percentile: 0
+
+Monthly bandwidth report 51
+Month: Mar 2013
+BW in: 785483961
+BW out: 793254417
+BW total: 1578738378
+BW 95th percentile: 0
+
+Monthly bandwidth report 52
+Month: Apr 2013
+BW in: 765640801
+BW out: 441459764
+BW total: 1207100565
+BW 95th percentile: 0
+
+Monthly bandwidth report 53
+Month: May 2013
+BW in: 96498244
+BW out: 68343116
+BW total: 164841360
+BW 95th percentile: 0
+
+Monthly bandwidth report 54
+Month: Jun 2013
+BW in: 715973437
+BW out: 579851716
+BW total: 1295825153
+BW 95th percentile: 0
+
+Monthly bandwidth report 55
+Month: Jul 2013
+BW in: 963419309
+BW out: 213236069
+BW total: 1176655378
+BW 95th percentile: 0
+
+Monthly bandwidth report 56
+Month: Aug 2013
+BW in: 540987163
+BW out: 16426047
+BW total: 557413210
+BW 95th percentile: 0
+
+Monthly bandwidth report 57
+Month: Sep 2013
+BW in: 127652343
+BW out: 54789690
+BW total: 182442033
+BW 95th percentile: 0
+
+Monthly bandwidth report 58
+Month: Oct 2013
+BW in: 626902045
+BW out: 150685704
+BW total: 777587749
+BW 95th percentile: 0
+
+Monthly bandwidth report 59
+Month: Nov 2013
+BW in: 911281381
+BW out: 345079189
+BW total: 1256360570
+BW 95th percentile: 0
+
+Monthly bandwidth report 60
+Month: Dec 2013
+BW in: 901255891
+BW out: 16255763
+BW total: 917511654
+BW 95th percentile: 0
+
+Monthly bandwidth report 61
+Month: Jan 2014
+BW in: 643814858
+BW out: 908574034
+BW total: 1552388892
+BW 95th percentile: 0
+
+Monthly bandwidth report 62
+Month: Feb 2014
+BW in: 284289664
+BW out: 252216889
+BW total: 536506553
+BW 95th percentile: 0
+
+Monthly bandwidth report 63
+Month: Mar 2014
+BW in: 877137842
+BW out: 1006176866
+BW total: 1883314708
+BW 95th percentile: 0
+
+Monthly bandwidth report 64
+Month: Apr 2014
+BW in: 1011871720
+BW out: 476222149
+BW total: 1488093869
+BW 95th percentile: 0
+
+Monthly bandwidth report 65
+Month: May 2014
+BW in: 448412148
+BW out: 402267379
+BW total: 850679527
+BW 95th percentile: 0
+
+Monthly bandwidth report 66
+Month: Jun 2014
+BW in: 248868494
+BW out: 680543194
+BW total: 929411688
+BW 95th percentile: 0
+
+Monthly bandwidth report 67
+Month: Jul 2014
+BW in: 627429244
+BW out: 595005940
+BW total: 1222435184
+BW 95th percentile: 0
+
+Monthly bandwidth report 68
+Month: Aug 2014
+BW in: 494230302
+BW out: 179687721
+BW total: 673918023
+BW 95th percentile: 0
+
+Monthly bandwidth report 69
+Month: Sep 2014
+BW in: 766511171
+BW out: 31734597
+BW total: 798245768
+BW 95th percentile: 0
+
+Monthly bandwidth report 70
+Month: Oct 2014
+BW in: 605081224
+BW out: 550328622
+BW total: 1155409846
+BW 95th percentile: 0
+
+Monthly bandwidth report 71
+Month: Nov 2014
+BW in: 687691409
+BW out: 373520360
+BW total: 1061211769
+BW 95th percentile: 0
+
+Monthly bandwidth report 72
+Month: Dec 2014
+BW in: 857220723
+BW out: 1008534578
+BW total: 1865755301
+BW 95th percentile: 0
+
+Monthly bandwidth report 73
+Month: Jan 2015
+BW in: 551751799
+BW out: 597426384
+BW total: 1149178183
+BW 95th percentile: 0
+
+Monthly bandwidth report 74
+Month: Feb 2015
+BW in: 887099699
+BW out: 245367290
+BW total: 1132466989
+BW 95th percentile: 0
+
+Monthly bandwidth report 75
+Month: Mar 2015
+BW in: 824938917
+BW out: 672739203
+BW total: 1497678120
+BW 95th percentile: 0
+
+Monthly bandwidth report 76
+Month: Apr 2015
+BW in: 42019583
+BW out: 395499468
+BW total: 437519051
+BW 95th percentile: 0
+
+Monthly bandwidth report 77
+Month: May 2015
+BW in: 728348305
+BW out: 488014622
+BW total: 1216362927
+BW 95th percentile: 0
+
+Monthly bandwidth report 78
+Month: Jun 2015
+BW in: 302753764
+BW out: 950651750
+BW total: 1253405514
+BW 95th percentile: 0
+
+Monthly bandwidth report 79
+Month: Jul 2015
+BW in: 508964752
+BW out: 513423911
+BW total: 1022388663
+BW 95th percentile: 0
+
+Monthly bandwidth report 80
+Month: Aug 2015
+BW in: 638063745
+BW out: 164063201
+BW total: 802126946
+BW 95th percentile: 0
+
+Monthly bandwidth report 81
+Month: Sep 2015
+BW in: 130213219
+BW out: 239751287
+BW total: 369964506
+BW 95th percentile: 0
+
+Monthly bandwidth report 82
+Month: Oct 2015
+BW in: 131439567
+BW out: 561151930
+BW total: 692591497
+BW 95th percentile: 0
+
+Monthly bandwidth report 83
+Month: Nov 2015
+BW in: 1038109398
+BW out: 934185791
+BW total: 1972295189
+BW 95th percentile: 0
+
+Monthly bandwidth report 84
+Month: Dec 2015
+BW in: 462738625
+BW out: 606388225
+BW total: 1069126850
+BW 95th percentile: 0
+
+Monthly bandwidth report 85
+Month: Jan 2016
+BW in: 634301211
+BW out: 447214324
+BW total: 1081515535
+BW 95th percentile: 0
+
+Monthly bandwidth report 86
+Month: Feb 2016
+BW in: 457916356
+BW out: 879546784
+BW total: 1337463140
+BW 95th percentile: 0
+
+Monthly bandwidth report 87
+Month: Mar 2016
+BW in: 813739787
+BW out: 350927268
+BW total: 1164667055
+BW 95th percentile: 0
+
+Monthly bandwidth report 88
+Month: Apr 2016
+BW in: 402306177
+BW out: 270294497
+BW total: 672600674
+BW 95th percentile: 0
+
+Monthly bandwidth report 89
+Month: May 2016
+BW in: 51353310
+BW out: 349496909
+BW total: 400850219
+BW 95th percentile: 0
+
+Monthly bandwidth report 90
+Month: Jun 2016
+BW in: 774206913
+BW out: 279711458
+BW total: 1053918371
+BW 95th percentile: 0
+
+Monthly bandwidth report 91
+Month: Jul 2016
+BW in: 119077166
+BW out: 766504429
+BW total: 885581595
+BW 95th percentile: 0
+
+Monthly bandwidth report 92
+Month: Aug 2016
+BW in: 725025055
+BW out: 849414768
+BW total: 1574439823
+BW 95th percentile: 0
+
+Monthly bandwidth report 93
+Month: Sep 2016
+BW in: 360247795
+BW out: 927110848
+BW total: 1287358643
+BW 95th percentile: 0
+
+Monthly bandwidth report 94
+Month: Oct 2016
+BW in: 1025936712
+BW out: 139414621
+BW total: 1165351333
+BW 95th percentile: 0
+
+Monthly bandwidth report 95
+Month: Nov 2016
+BW in: 292252176
+BW out: 617320375
+BW total: 909572551
+BW 95th percentile: 0
+
+Monthly bandwidth report 96
+Month: Dec 2016
+BW in: 744464792
+BW out: 253087259
+BW total: 997552051
+BW 95th percentile: 0
+
+Monthly bandwidth report 97
+Month: Jan 2017
+BW in: 467412675
+BW out: 441018023
+BW total: 908430698
+BW 95th percentile: 0
+
+Monthly bandwidth report 98
+Month: Feb 2017
+BW in: 420115403
+BW out: 447940121
+BW total: 868055524
+BW 95th percentile: 0
+
+Monthly bandwidth report 99
+Month: Mar 2017
+BW in: 242080792
+BW out: 296068792
+BW total: 538149584
+BW 95th percentile: 0
+
+Monthly bandwidth report 100
+Month: Apr 2017
+BW in: 1044167003
+BW out: 691307830
+BW total: 1735474833
+BW 95th percentile: 0
+
+Monthly bandwidth report 101
+Month: May 2017
+BW in: 134687758
+BW out: 280711473
+BW total: 415399231
+BW 95th percentile: 0
+
+Monthly bandwidth report 102
+Month: Jun 2017
+BW in: 684807902
+BW out: 377724592
+BW total: 1062532494
+BW 95th percentile: 0
+
+Monthly bandwidth report 103
+Month: Jul 2017
+BW in: 214822847
+BW out: 236214622
+BW total: 451037469
+BW 95th percentile: 0
+
+Monthly bandwidth report 104
+Month: Aug 2017
+BW in: 655501504
+BW out: 377421036
+BW total: 1032922540
+BW 95th percentile: 0
+
+Monthly bandwidth report 105
+Month: Sep 2017
+BW in: 85708445
+BW out: 32459266
+BW total: 118167711
+BW 95th percentile: 0
+
+Monthly bandwidth report 106
+Month: Oct 2017
+BW in: 899298439
+BW out: 159467842
+BW total: 1058766281
+BW 95th percentile: 0
+
+Monthly bandwidth report 107
+Month: Nov 2017
+BW in: 812958820
+BW out: 358352286
+BW total: 1171311106
+BW 95th percentile: 0
+
+Monthly bandwidth report 108
+Month: Dec 2017
+BW in: 44986034
+BW out: 437450612
+BW total: 482436646
+BW 95th percentile: 0
+
+Monthly bandwidth report 109
+Month: Jan 2018
+BW in: 588468055
+BW out: 355766622
+BW total: 944234677
+BW 95th percentile: 0
+
+Monthly bandwidth report 110
+Month: Feb 2018
+BW in: 200904134
+BW out: 110998549
+BW total: 311902683
+BW 95th percentile: 0
+
+Monthly bandwidth report 111
+Month: Mar 2018
+BW in: 981990902
+BW out: 323324003
+BW total: 1305314905
+BW 95th percentile: 0
+
+Monthly bandwidth report 112
+Month: Apr 2018
+BW in: 314136049
+BW out: 16980835
+BW total: 331116884
+BW 95th percentile: 0
+
+Monthly bandwidth report 113
+Month: May 2018
+BW in: 776491355
+BW out: 204829096
+BW total: 981320451
+BW 95th percentile: 0
+
+Monthly bandwidth report 114
+Month: Jun 2018
+BW in: 412134108
+BW out: 372721764
+BW total: 784855872
+BW 95th percentile: 0
+
+Monthly bandwidth report 115
+Month: Jul 2018
+BW in: 1004553688
+BW out: 1028107878
+BW total: 2032661566
+BW 95th percentile: 0
+
+Monthly bandwidth report 116
+Month: Aug 2018
+BW in: 28213704
+BW out: 829026341
+BW total: 857240045
+BW 95th percentile: 0
+
+Monthly bandwidth report 117
+Month: Sep 2018
+BW in: 379071728
+BW out: 82899082
+BW total: 461970810
+BW 95th percentile: 0
+
+Monthly bandwidth report 118
+Month: Oct 2018
+BW in: 145023699
+BW out: 912107515
+BW total: 1057131214
+BW 95th percentile: 0
+
+Monthly bandwidth report 119
+Month: Nov 2018
+BW in: 81696527
+BW out: 347300462
+BW total: 428996989
+BW 95th percentile: 0
+
+Monthly bandwidth report 120
+Month: Dec 2018
+BW in: 634591920
+BW out: 124033173
+BW total: 758625093
+BW 95th percentile: 0
+
+Monthly bandwidth report 121
+Month: Jan 2019
+BW in: 271609344
+BW out: 648515675
+BW total: 920125019
+BW 95th percentile: 0
+
+Monthly bandwidth report 122
+Month: Feb 2019
+BW in: 53706176
+BW out: 259792909
+BW total: 313499085
+BW 95th percentile: 0
+
+Monthly bandwidth report 123
+Month: Mar 2019
+BW in: 791763758
+BW out: 584996949
+BW total: 1376760707
+BW 95th percentile: 0
+
+Monthly bandwidth report 124
+Month: Apr 2019
+BW in: 513870262
+BW out: 109060388
+BW total: 622930650
+BW 95th percentile: 0
+
+Monthly bandwidth report 125
+Month: May 2019
+BW in: 396031988
+BW out: 1056406613
+BW total: 1452438601
+BW 95th percentile: 0
+
+Monthly bandwidth report 126
+Month: Jun 2019
+BW in: 933213889
+BW out: 960055993
+BW total: 1893269882
+BW 95th percentile: 0
+
+Monthly bandwidth report 127
+Month: Jul 2019
+BW in: 95164658
+BW out: 933168454
+BW total: 1028333112
+BW 95th percentile: 0
+
+Monthly bandwidth report 128
+Month: Aug 2019
+BW in: 783058751
+BW out: 885105577
+BW total: 1668164328
+BW 95th percentile: 0
+
+Monthly bandwidth report 129
+Month: Sep 2019
+BW in: 1040317247
+BW out: 667827066
+BW total: 1708144313
+BW 95th percentile: 0
+
+Monthly bandwidth report 130
+Month: Oct 2019
+BW in: 674975060
+BW out: 9993750
+BW total: 684968810
+BW 95th percentile: 0
+
+Monthly bandwidth report 131
+Month: Nov 2019
+BW in: 897822336
+BW out: 282779739
+BW total: 1180602075
+BW 95th percentile: 0
+
+Monthly bandwidth report 132
+Month: Dec 2019
+BW in: 446609171
+BW out: 131342389
+BW total: 577951560
+BW 95th percentile: 0
+
+Monthly bandwidth report 133
+Month: Jan 2020
+BW in: 4245561
+BW out: 70272098
+BW total: 74517659
+BW 95th percentile: 0
+
+Monthly bandwidth report 134
+Month: Feb 2020
+BW in: 854137937
+BW out: 730059737
+BW total: 1584197674
+BW 95th percentile: 0
+
+Monthly bandwidth report 135
+Month: Mar 2020
+BW in: 213328586
+BW out: 206620342
+BW total: 419948928
+BW 95th percentile: 0
+
+Monthly bandwidth report 136
+Month: Apr 2020
+BW in: 355754085
+BW out: 241167592
+BW total: 596921677
+BW 95th percentile: 0
+
+Monthly bandwidth report 137
+Month: May 2020
+BW in: 794916524
+BW out: 76870960
+BW total: 871787484
+BW 95th percentile: 0
+
+Monthly bandwidth report 138
+Month: Jun 2020
+BW in: 913131028
+BW out: 333475226
+BW total: 1246606254
+BW 95th percentile: 0
+
+Monthly bandwidth report 139
+Month: Jul 2020
+BW in: 269617827
+BW out: 54343139
+BW total: 323960966
+BW 95th percentile: 0
+
+Server 2
+Service ID: TEST-00002
+Service type field: VPS
+Primary IP: 10.0.1.1
+Location: Test-VPS-Node
+Your reference: VPS-1
+Status: OK
+
+Service Statuses
+
+Server status 1
+Status code: OK
+Test Id: 3
+Test name: Connectivity
+Test arg1:
+Monitored Ip: 10.0.1.1
+Last updated: 05 Jul 2020
+
+Server status 2
+Status code: OK
+Test Id: 4
+Test name: SwitchPorts
+Test arg1:
+Monitored Ip: 10.0.1.1
+Last updated: 05 Jul 2020
+
+Server details
+
+Bandwidth url base: https://myservers.rapidswitch.com/Api/SampleBW.png?graphkey=xxxxxxxx
+Your reference: VPS-1
+Location: Test-VPS-Node
+Primary IP: 10.0.1.1
+Service description: Second RapidSwitch Test Server
+Virtual Server
+
+Test types
+
+Test type 1
+Test type: Connectivity
+
+Test type 2
+Test type: Http
+
+Test type 3
+Test type: SSH
+
+Test type 4
+Test type: RDP
+
+Test type 5
+Test type: Telnet
+
+Test type 6
+Test type: SMTP
+
+Test type 7
+Test type: TCPPortOpen
+
+Test type 8
+Test type: DoNotMonitor
+
+Test type 9
+Test type: SwitchPort
+
+Test type 10
+Test type: ChassisStatus
+
+Test type 11
+Test type: RaidStatus
+
+Test type 12
+Test type: CustomSnmp
+
+Alerts
+
+Bandwidth reports
+
+Last 4 Hours
+BW4h In: 764700657
+BW4h Out: 303073720
+BW4h Total: 1067774377
+
+Last 24 Hours
+BW24h In: 1050431599
+BW24h Out: 1021888897
+BW24h Total: 2072320496
+
+So far this month
+BW so far this month in: 94893988
+BW so far this month out: 141899534
+BW so far this month total: 236793522
+
+Predicted this month (24h)
+BW predicted 24h in: 373582154
+BW predicted 24h out: 333659945
+BW predicted 24h total: 707242099
+
+Predicted this month (14d)
+BW predicted 24h in: 733861682
+BW predicted 24h out: 519645097
+BW predicted 24h total: 1253506779
+
+Monthly Bandwidth Reports
+
+Monthly bandwidth report 1
+Month: Jan 2009
+BW in: 945532091
+BW out: 487611284
+BW total: 1433143375
+BW 95th percentile: 0
+
+Monthly bandwidth report 2
+Month: Feb 2009
+BW in: 746067225
+BW out: 624598169
+BW total: 1370665394
+BW 95th percentile: 0
+
+Monthly bandwidth report 3
+Month: Mar 2009
+BW in: 299952659
+BW out: 1062571427
+BW total: 1362524086
+BW 95th percentile: 0
+
+Monthly bandwidth report 4
+Month: Apr 2009
+BW in: 201906503
+BW out: 996105609
+BW total: 1198012112
+BW 95th percentile: 0
+
+Monthly bandwidth report 5
+Month: May 2009
+BW in: 255547348
+BW out: 721491660
+BW total: 977039008
+BW 95th percentile: 0
+
+Monthly bandwidth report 6
+Month: Jun 2009
+BW in: 804600835
+BW out: 857552347
+BW total: 1662153182
+BW 95th percentile: 0
+
+Monthly bandwidth report 7
+Month: Jul 2009
+BW in: 969473624
+BW out: 189411645
+BW total: 1158885269
+BW 95th percentile: 0
+
+Monthly bandwidth report 8
+Month: Aug 2009
+BW in: 700652528
+BW out: 692046297
+BW total: 1392698825
+BW 95th percentile: 0
+
+Monthly bandwidth report 9
+Month: Sep 2009
+BW in: 165139468
+BW out: 18293697
+BW total: 183433165
+BW 95th percentile: 0
+
+Monthly bandwidth report 10
+Month: Oct 2009
+BW in: 20037425
+BW out: 449583525
+BW total: 469620950
+BW 95th percentile: 0
+
+Monthly bandwidth report 11
+Month: Nov 2009
+BW in: 615487750
+BW out: 985974108
+BW total: 1601461858
+BW 95th percentile: 0
+
+Monthly bandwidth report 12
+Month: Dec 2009
+BW in: 368868165
+BW out: 483480654
+BW total: 852348819
+BW 95th percentile: 0
+
+Monthly bandwidth report 13
+Month: Jan 2010
+BW in: 319034916
+BW out: 594748616
+BW total: 913783532
+BW 95th percentile: 0
+
+Monthly bandwidth report 14
+Month: Feb 2010
+BW in: 306089963
+BW out: 498462097
+BW total: 804552060
+BW 95th percentile: 0
+
+Monthly bandwidth report 15
+Month: Mar 2010
+BW in: 36448400
+BW out: 936087850
+BW total: 972536250
+BW 95th percentile: 0
+
+Monthly bandwidth report 16
+Month: Apr 2010
+BW in: 410152238
+BW out: 334492839
+BW total: 744645077
+BW 95th percentile: 0
+
+Monthly bandwidth report 17
+Month: May 2010
+BW in: 356477583
+BW out: 953410464
+BW total: 1309888047
+BW 95th percentile: 0
+
+Monthly bandwidth report 18
+Month: Jun 2010
+BW in: 334830074
+BW out: 941884624
+BW total: 1276714698
+BW 95th percentile: 0
+
+Monthly bandwidth report 19
+Month: Jul 2010
+BW in: 568842190
+BW out: 170318354
+BW total: 739160544
+BW 95th percentile: 0
+
+Monthly bandwidth report 20
+Month: Aug 2010
+BW in: 850660124
+BW out: 924301423
+BW total: 1774961547
+BW 95th percentile: 0
+
+Monthly bandwidth report 21
+Month: Sep 2010
+BW in: 131568722
+BW out: 347254040
+BW total: 478822762
+BW 95th percentile: 0
+
+Monthly bandwidth report 22
+Month: Oct 2010
+BW in: 872537614
+BW out: 651209063
+BW total: 1523746677
+BW 95th percentile: 0
+
+Monthly bandwidth report 23
+Month: Nov 2010
+BW in: 460635393
+BW out: 980890132
+BW total: 1441525525
+BW 95th percentile: 0
+
+Monthly bandwidth report 24
+Month: Dec 2010
+BW in: 407341918
+BW out: 861019953
+BW total: 1268361871
+BW 95th percentile: 0
+
+Monthly bandwidth report 25
+Month: Jan 2011
+BW in: 321236369
+BW out: 476589514
+BW total: 797825883
+BW 95th percentile: 0
+
+Monthly bandwidth report 26
+Month: Feb 2011
+BW in: 1050501888
+BW out: 715567985
+BW total: 1766069873
+BW 95th percentile: 0
+
+Monthly bandwidth report 27
+Month: Mar 2011
+BW in: 499607671
+BW out: 997740452
+BW total: 1497348123
+BW 95th percentile: 0
+
+Monthly bandwidth report 28
+Month: Apr 2011
+BW in: 791914018
+BW out: 1033299806
+BW total: 1825213824
+BW 95th percentile: 0
+
+Monthly bandwidth report 29
+Month: May 2011
+BW in: 118743118
+BW out: 262586570
+BW total: 381329688
+BW 95th percentile: 0
+
+Monthly bandwidth report 30
+Month: Jun 2011
+BW in: 305563252
+BW out: 778945866
+BW total: 1084509118
+BW 95th percentile: 0
+
+Monthly bandwidth report 31
+Month: Jul 2011
+BW in: 756481463
+BW out: 777186229
+BW total: 1533667692
+BW 95th percentile: 0
+
+Monthly bandwidth report 32
+Month: Aug 2011
+BW in: 959657208
+BW out: 393201321
+BW total: 1352858529
+BW 95th percentile: 0
+
+Monthly bandwidth report 33
+Month: Sep 2011
+BW in: 311339421
+BW out: 470107995
+BW total: 781447416
+BW 95th percentile: 0
+
+Monthly bandwidth report 34
+Month: Oct 2011
+BW in: 501074764
+BW out: 16063159
+BW total: 517137923
+BW 95th percentile: 0
+
+Monthly bandwidth report 35
+Month: Nov 2011
+BW in: 928323394
+BW out: 832509727
+BW total: 1760833121
+BW 95th percentile: 0
+
+Monthly bandwidth report 36
+Month: Dec 2011
+BW in: 123204106
+BW out: 1068562937
+BW total: 1191767043
+BW 95th percentile: 0
+
+Monthly bandwidth report 37
+Month: Jan 2012
+BW in: 241375396
+BW out: 169477825
+BW total: 410853221
+BW 95th percentile: 0
+
+Monthly bandwidth report 38
+Month: Feb 2012
+BW in: 318014802
+BW out: 268233709
+BW total: 586248511
+BW 95th percentile: 0
+
+Monthly bandwidth report 39
+Month: Mar 2012
+BW in: 113436493
+BW out: 791400925
+BW total: 904837418
+BW 95th percentile: 0
+
+Monthly bandwidth report 40
+Month: Apr 2012
+BW in: 22845260
+BW out: 411886607
+BW total: 434731867
+BW 95th percentile: 0
+
+Monthly bandwidth report 41
+Month: May 2012
+BW in: 187406697
+BW out: 518811833
+BW total: 706218530
+BW 95th percentile: 0
+
+Monthly bandwidth report 42
+Month: Jun 2012
+BW in: 177225727
+BW out: 633600709
+BW total: 810826436
+BW 95th percentile: 0
+
+Monthly bandwidth report 43
+Month: Jul 2012
+BW in: 959327784
+BW out: 768326076
+BW total: 1727653860
+BW 95th percentile: 0
+
+Monthly bandwidth report 44
+Month: Aug 2012
+BW in: 908626990
+BW out: 432478954
+BW total: 1341105944
+BW 95th percentile: 0
+
+Monthly bandwidth report 45
+Month: Sep 2012
+BW in: 161496446
+BW out: 375272091
+BW total: 536768537
+BW 95th percentile: 0
+
+Monthly bandwidth report 46
+Month: Oct 2012
+BW in: 823141505
+BW out: 306255619
+BW total: 1129397124
+BW 95th percentile: 0
+
+Monthly bandwidth report 47
+Month: Nov 2012
+BW in: 938496925
+BW out: 71714257
+BW total: 1010211182
+BW 95th percentile: 0
+
+Monthly bandwidth report 48
+Month: Dec 2012
+BW in: 167819959
+BW out: 428124315
+BW total: 595944274
+BW 95th percentile: 0
+
+Monthly bandwidth report 49
+Month: Jan 2013
+BW in: 461338655
+BW out: 479336292
+BW total: 940674947
+BW 95th percentile: 0
+
+Monthly bandwidth report 50
+Month: Feb 2013
+BW in: 339869641
+BW out: 1064269221
+BW total: 1404138862
+BW 95th percentile: 0
+
+Monthly bandwidth report 51
+Month: Mar 2013
+BW in: 479815368
+BW out: 391278758
+BW total: 871094126
+BW 95th percentile: 0
+
+Monthly bandwidth report 52
+Month: Apr 2013
+BW in: 1006438381
+BW out: 562468465
+BW total: 1568906846
+BW 95th percentile: 0
+
+Monthly bandwidth report 53
+Month: May 2013
+BW in: 353385407
+BW out: 1055680774
+BW total: 1409066181
+BW 95th percentile: 0
+
+Monthly bandwidth report 54
+Month: Jun 2013
+BW in: 474192588
+BW out: 330129846
+BW total: 804322434
+BW 95th percentile: 0
+
+Monthly bandwidth report 55
+Month: Jul 2013
+BW in: 679725649
+BW out: 523680308
+BW total: 1203405957
+BW 95th percentile: 0
+
+Monthly bandwidth report 56
+Month: Aug 2013
+BW in: 919863312
+BW out: 401084015
+BW total: 1320947327
+BW 95th percentile: 0
+
+Monthly bandwidth report 57
+Month: Sep 2013
+BW in: 239741309
+BW out: 967418468
+BW total: 1207159777
+BW 95th percentile: 0
+
+Monthly bandwidth report 58
+Month: Oct 2013
+BW in: 591539169
+BW out: 237669629
+BW total: 829208798
+BW 95th percentile: 0
+
+Monthly bandwidth report 59
+Month: Nov 2013
+BW in: 599960501
+BW out: 326056499
+BW total: 926017000
+BW 95th percentile: 0
+
+Monthly bandwidth report 60
+Month: Dec 2013
+BW in: 507615359
+BW out: 616755167
+BW total: 1124370526
+BW 95th percentile: 0
+
+Monthly bandwidth report 61
+Month: Jan 2014
+BW in: 635222828
+BW out: 68595809
+BW total: 703818637
+BW 95th percentile: 0
+
+Monthly bandwidth report 62
+Month: Feb 2014
+BW in: 928308536
+BW out: 553051303
+BW total: 1481359839
+BW 95th percentile: 0
+
+Monthly bandwidth report 63
+Month: Mar 2014
+BW in: 9368221
+BW out: 890690310
+BW total: 900058531
+BW 95th percentile: 0
+
+Monthly bandwidth report 64
+Month: Apr 2014
+BW in: 130066011
+BW out: 169661138
+BW total: 299727149
+BW 95th percentile: 0
+
+Monthly bandwidth report 65
+Month: May 2014
+BW in: 1657865
+BW out: 963632310
+BW total: 965290175
+BW 95th percentile: 0
+
+Monthly bandwidth report 66
+Month: Jun 2014
+BW in: 880636877
+BW out: 707842024
+BW total: 1588478901
+BW 95th percentile: 0
+
+Monthly bandwidth report 67
+Month: Jul 2014
+BW in: 451531283
+BW out: 32317862
+BW total: 483849145
+BW 95th percentile: 0
+
+Monthly bandwidth report 68
+Month: Aug 2014
+BW in: 1005813062
+BW out: 869869761
+BW total: 1875682823
+BW 95th percentile: 0
+
+Monthly bandwidth report 69
+Month: Sep 2014
+BW in: 586115275
+BW out: 688499085
+BW total: 1274614360
+BW 95th percentile: 0
+
+Monthly bandwidth report 70
+Month: Oct 2014
+BW in: 280215301
+BW out: 977388833
+BW total: 1257604134
+BW 95th percentile: 0
+
+Monthly bandwidth report 71
+Month: Nov 2014
+BW in: 294133487
+BW out: 578497144
+BW total: 872630631
+BW 95th percentile: 0
+
+Monthly bandwidth report 72
+Month: Dec 2014
+BW in: 826495128
+BW out: 711557960
+BW total: 1538053088
+BW 95th percentile: 0
+
+Monthly bandwidth report 73
+Month: Jan 2015
+BW in: 529150602
+BW out: 422057489
+BW total: 951208091
+BW 95th percentile: 0
+
+Monthly bandwidth report 74
+Month: Feb 2015
+BW in: 66514310
+BW out: 1044820279
+BW total: 1111334589
+BW 95th percentile: 0
+
+Monthly bandwidth report 75
+Month: Mar 2015
+BW in: 553916911
+BW out: 1003892153
+BW total: 1557809064
+BW 95th percentile: 0
+
+Monthly bandwidth report 76
+Month: Apr 2015
+BW in: 901905637
+BW out: 135282155
+BW total: 1037187792
+BW 95th percentile: 0
+
+Monthly bandwidth report 77
+Month: May 2015
+BW in: 1045462756
+BW out: 796856297
+BW total: 1842319053
+BW 95th percentile: 0
+
+Monthly bandwidth report 78
+Month: Jun 2015
+BW in: 429046392
+BW out: 411219558
+BW total: 840265950
+BW 95th percentile: 0
+
+Monthly bandwidth report 79
+Month: Jul 2015
+BW in: 536712045
+BW out: 453387078
+BW total: 990099123
+BW 95th percentile: 0
+
+Monthly bandwidth report 80
+Month: Aug 2015
+BW in: 553100243
+BW out: 536436920
+BW total: 1089537163
+BW 95th percentile: 0
+
+Monthly bandwidth report 81
+Month: Sep 2015
+BW in: 925614762
+BW out: 304531449
+BW total: 1230146211
+BW 95th percentile: 0
+
+Monthly bandwidth report 82
+Month: Oct 2015
+BW in: 328471980
+BW out: 789835162
+BW total: 1118307142
+BW 95th percentile: 0
+
+Monthly bandwidth report 83
+Month: Nov 2015
+BW in: 716785254
+BW out: 212021287
+BW total: 928806541
+BW 95th percentile: 0
+
+Monthly bandwidth report 84
+Month: Dec 2015
+BW in: 1023294555
+BW out: 207423446
+BW total: 1230718001
+BW 95th percentile: 0
+
+Monthly bandwidth report 85
+Month: Jan 2016
+BW in: 1035347229
+BW out: 795411230
+BW total: 1830758459
+BW 95th percentile: 0
+
+Monthly bandwidth report 86
+Month: Feb 2016
+BW in: 725296177
+BW out: 985203239
+BW total: 1710499416
+BW 95th percentile: 0
+
+Monthly bandwidth report 87
+Month: Mar 2016
+BW in: 45841197
+BW out: 603968349
+BW total: 649809546
+BW 95th percentile: 0
+
+Monthly bandwidth report 88
+Month: Apr 2016
+BW in: 322621679
+BW out: 56725683
+BW total: 379347362
+BW 95th percentile: 0
+
+Monthly bandwidth report 89
+Month: May 2016
+BW in: 315842504
+BW out: 216750575
+BW total: 532593079
+BW 95th percentile: 0
+
+Monthly bandwidth report 90
+Month: Jun 2016
+BW in: 23900700
+BW out: 661052554
+BW total: 684953254
+BW 95th percentile: 0
+
+Monthly bandwidth report 91
+Month: Jul 2016
+BW in: 824175999
+BW out: 158987555
+BW total: 983163554
+BW 95th percentile: 0
+
+Monthly bandwidth report 92
+Month: Aug 2016
+BW in: 689486050
+BW out: 71507535
+BW total: 760993585
+BW 95th percentile: 0
+
+Monthly bandwidth report 93
+Month: Sep 2016
+BW in: 61726672
+BW out: 745354721
+BW total: 807081393
+BW 95th percentile: 0
+
+Monthly bandwidth report 94
+Month: Oct 2016
+BW in: 736121091
+BW out: 728416809
+BW total: 1464537900
+BW 95th percentile: 0
+
+Monthly bandwidth report 95
+Month: Nov 2016
+BW in: 677013293
+BW out: 594593503
+BW total: 1271606796
+BW 95th percentile: 0
+
+Monthly bandwidth report 96
+Month: Dec 2016
+BW in: 333157716
+BW out: 132728196
+BW total: 465885912
+BW 95th percentile: 0
+
+Monthly bandwidth report 97
+Month: Jan 2017
+BW in: 135398841
+BW out: 817520203
+BW total: 952919044
+BW 95th percentile: 0
+
+Monthly bandwidth report 98
+Month: Feb 2017
+BW in: 51774070
+BW out: 1063343861
+BW total: 1115117931
+BW 95th percentile: 0
+
+Monthly bandwidth report 99
+Month: Mar 2017
+BW in: 250025163
+BW out: 36659965
+BW total: 286685128
+BW 95th percentile: 0
+
+Monthly bandwidth report 100
+Month: Apr 2017
+BW in: 1068514529
+BW out: 317129314
+BW total: 1385643843
+BW 95th percentile: 0
+
+Monthly bandwidth report 101
+Month: May 2017
+BW in: 472504757
+BW out: 932832687
+BW total: 1405337444
+BW 95th percentile: 0
+
+Monthly bandwidth report 102
+Month: Jun 2017
+BW in: 9473049
+BW out: 832247503
+BW total: 841720552
+BW 95th percentile: 0
+
+Monthly bandwidth report 103
+Month: Jul 2017
+BW in: 278595975
+BW out: 990444221
+BW total: 1269040196
+BW 95th percentile: 0
+
+Monthly bandwidth report 104
+Month: Aug 2017
+BW in: 89440957
+BW out: 441494406
+BW total: 530935363
+BW 95th percentile: 0
+
+Monthly bandwidth report 105
+Month: Sep 2017
+BW in: 474234617
+BW out: 372320708
+BW total: 846555325
+BW 95th percentile: 0
+
+Monthly bandwidth report 106
+Month: Oct 2017
+BW in: 95377053
+BW out: 319961469
+BW total: 415338522
+BW 95th percentile: 0
+
+Monthly bandwidth report 107
+Month: Nov 2017
+BW in: 429486377
+BW out: 965789512
+BW total: 1395275889
+BW 95th percentile: 0
+
+Monthly bandwidth report 108
+Month: Dec 2017
+BW in: 786002744
+BW out: 766627207
+BW total: 1552629951
+BW 95th percentile: 0
+
+Monthly bandwidth report 109
+Month: Jan 2018
+BW in: 688787222
+BW out: 256964445
+BW total: 945751667
+BW 95th percentile: 0
+
+Monthly bandwidth report 110
+Month: Feb 2018
+BW in: 728108489
+BW out: 1045172356
+BW total: 1773280845
+BW 95th percentile: 0
+
+Monthly bandwidth report 111
+Month: Mar 2018
+BW in: 549642019
+BW out: 294877745
+BW total: 844519764
+BW 95th percentile: 0
+
+Monthly bandwidth report 112
+Month: Apr 2018
+BW in: 604151976
+BW out: 440753725
+BW total: 1044905701
+BW 95th percentile: 0
+
+Monthly bandwidth report 113
+Month: May 2018
+BW in: 462253514
+BW out: 592567980
+BW total: 1054821494
+BW 95th percentile: 0
+
+Monthly bandwidth report 114
+Month: Jun 2018
+BW in: 849804397
+BW out: 302062817
+BW total: 1151867214
+BW 95th percentile: 0
+
+Monthly bandwidth report 115
+Month: Jul 2018
+BW in: 552194279
+BW out: 333019641
+BW total: 885213920
+BW 95th percentile: 0
+
+Monthly bandwidth report 116
+Month: Aug 2018
+BW in: 880442343
+BW out: 279182538
+BW total: 1159624881
+BW 95th percentile: 0
+
+Monthly bandwidth report 117
+Month: Sep 2018
+BW in: 221977869
+BW out: 780513209
+BW total: 1002491078
+BW 95th percentile: 0
+
+Monthly bandwidth report 118
+Month: Oct 2018
+BW in: 188547796
+BW out: 965085135
+BW total: 1153632931
+BW 95th percentile: 0
+
+Monthly bandwidth report 119
+Month: Nov 2018
+BW in: 149514505
+BW out: 930980370
+BW total: 1080494875
+BW 95th percentile: 0
+
+Monthly bandwidth report 120
+Month: Dec 2018
+BW in: 866653383
+BW out: 145024274
+BW total: 1011677657
+BW 95th percentile: 0
+
+Monthly bandwidth report 121
+Month: Jan 2019
+BW in: 655913763
+BW out: 294626684
+BW total: 950540447
+BW 95th percentile: 0
+
+Monthly bandwidth report 122
+Month: Feb 2019
+BW in: 254182192
+BW out: 304692584
+BW total: 558874776
+BW 95th percentile: 0
+
+Monthly bandwidth report 123
+Month: Mar 2019
+BW in: 499216450
+BW out: 13196246
+BW total: 512412696
+BW 95th percentile: 0
+
+Monthly bandwidth report 124
+Month: Apr 2019
+BW in: 776983642
+BW out: 243351152
+BW total: 1020334794
+BW 95th percentile: 0
+
+Monthly bandwidth report 125
+Month: May 2019
+BW in: 31517459
+BW out: 358888686
+BW total: 390406145
+BW 95th percentile: 0
+
+Monthly bandwidth report 126
+Month: Jun 2019
+BW in: 374556638
+BW out: 1066802541
+BW total: 1441359179
+BW 95th percentile: 0
+
+Monthly bandwidth report 127
+Month: Jul 2019
+BW in: 382293299
+BW out: 23342172
+BW total: 405635471
+BW 95th percentile: 0
+
+Monthly bandwidth report 128
+Month: Aug 2019
+BW in: 841229117
+BW out: 177627012
+BW total: 1018856129
+BW 95th percentile: 0
+
+Monthly bandwidth report 129
+Month: Sep 2019
+BW in: 328680710
+BW out: 642461147
+BW total: 971141857
+BW 95th percentile: 0
+
+Monthly bandwidth report 130
+Month: Oct 2019
+BW in: 369993989
+BW out: 759769817
+BW total: 1129763806
+BW 95th percentile: 0
+
+Monthly bandwidth report 131
+Month: Nov 2019
+BW in: 140639823
+BW out: 861119963
+BW total: 1001759786
+BW 95th percentile: 0
+
+Monthly bandwidth report 132
+Month: Dec 2019
+BW in: 963041950
+BW out: 141214975
+BW total: 1104256925
+BW 95th percentile: 0
+
+Monthly bandwidth report 133
+Month: Jan 2020
+BW in: 565620188
+BW out: 889936337
+BW total: 1455556525
+BW 95th percentile: 0
+
+Monthly bandwidth report 134
+Month: Feb 2020
+BW in: 97983599
+BW out: 722714990
+BW total: 820698589
+BW 95th percentile: 0
+
+Monthly bandwidth report 135
+Month: Mar 2020
+BW in: 777241715
+BW out: 894659431
+BW total: 1671901146
+BW 95th percentile: 0
+
+Monthly bandwidth report 136
+Month: Apr 2020
+BW in: 617112701
+BW out: 831548675
+BW total: 1448661376
+BW 95th percentile: 0
+
+Monthly bandwidth report 137
+Month: May 2020
+BW in: 464052885
+BW out: 583084214
+BW total: 1047137099
+BW 95th percentile: 0
+
+Monthly bandwidth report 138
+Month: Jun 2020
+BW in: 389258593
+BW out: 255015334
+BW total: 644273927
+BW 95th percentile: 0
+
+Monthly bandwidth report 139
+Month: Jul 2020
+BW in: 40695552
+BW out: 299459391
+BW total: 340154943
+BW 95th percentile: 0
+
+Server 3
+Service ID: TEST-00003
+Service type field: Colo
+Primary IP: 10.0.0.5
+Location: A1 @ RapidSwitch Test
+Your reference: Colo-1
+Status: OK
+
+Service Statuses
+
+Server status 1
+Status code: Failure
+Test Id: 5
+Test name: Connectivity
+Test arg1:
+Monitored Ip: 10.0.0.5
+Last updated: 05 Jul 2020
+
+Server status 2
+Status code: OK
+Test Id: 6
+Test name: SwitchPorts
+Test arg1:
+Monitored Ip: 10.0.0.5
+Last updated: 05 Jul 2020
+
+Server details
+
+Bandwidth url base: https://myservers.rapidswitch.com/Api/SampleBW.png?graphkey=xxxxxxxx
+Your reference: Colo-1
+Location: A1 @ RapidSwitch Test
+Primary IP: 10.0.0.5
+Service description: Third RapidSwitch Test Server
+Colo Server
+Suspended by Rapidswitch
+
+Test types
+
+Test type 1
+Test type: Connectivity
+
+Test type 2
+Test type: Http
+
+Test type 3
+Test type: SSH
+
+Test type 4
+Test type: RDP
+
+Test type 5
+Test type: Telnet
+
+Test type 6
+Test type: SMTP
+
+Test type 7
+Test type: TCPPortOpen
+
+Test type 8
+Test type: DoNotMonitor
+
+Test type 9
+Test type: SwitchPort
+
+Test type 10
+Test type: ChassisStatus
+
+Test type 11
+Test type: RaidStatus
+
+Test type 12
+Test type: CustomSnmp
+
+Alerts
+
+Bandwidth reports
+
+Last 4 Hours
+BW4h In: 889326161
+BW4h Out: 606453244
+BW4h Total: 1495779405
+
+Last 24 Hours
+BW24h In: 270545357
+BW24h Out: 193305592
+BW24h Total: 463850949
+
+So far this month
+BW so far this month in: 1032204826
+BW so far this month out: 887381625
+BW so far this month total: 1919586451
+
+Predicted this month (24h)
+BW predicted 24h in: 1013025915
+BW predicted 24h out: 10920784
+BW predicted 24h total: 1023946699
+
+Predicted this month (14d)
+BW predicted 24h in: 970631062
+BW predicted 24h out: 198635697
+BW predicted 24h total: 1169266759
+
+Monthly Bandwidth Reports
+
+Monthly bandwidth report 1
+Month: Jan 2009
+BW in: 636404424
+BW out: 580795181
+BW total: 1217199605
+BW 95th percentile: 0
+
+Monthly bandwidth report 2
+Month: Feb 2009
+BW in: 560986380
+BW out: 106883565
+BW total: 667869945
+BW 95th percentile: 0
+
+Monthly bandwidth report 3
+Month: Mar 2009
+BW in: 4384450
+BW out: 868535622
+BW total: 872920072
+BW 95th percentile: 0
+
+Monthly bandwidth report 4
+Month: Apr 2009
+BW in: 405326557
+BW out: 112967216
+BW total: 518293773
+BW 95th percentile: 0
+
+Monthly bandwidth report 5
+Month: May 2009
+BW in: 812814219
+BW out: 683021935
+BW total: 1495836154
+BW 95th percentile: 0
+
+Monthly bandwidth report 6
+Month: Jun 2009
+BW in: 988954470
+BW out: 54268651
+BW total: 1043223121
+BW 95th percentile: 0
+
+Monthly bandwidth report 7
+Month: Jul 2009
+BW in: 539851260
+BW out: 210599850
+BW total: 750451110
+BW 95th percentile: 0
+
+Monthly bandwidth report 8
+Month: Aug 2009
+BW in: 815517807
+BW out: 616749786
+BW total: 1432267593
+BW 95th percentile: 0
+
+Monthly bandwidth report 9
+Month: Sep 2009
+BW in: 602749655
+BW out: 872950908
+BW total: 1475700563
+BW 95th percentile: 0
+
+Monthly bandwidth report 10
+Month: Oct 2009
+BW in: 707825402
+BW out: 586213782
+BW total: 1294039184
+BW 95th percentile: 0
+
+Monthly bandwidth report 11
+Month: Nov 2009
+BW in: 136931459
+BW out: 29221318
+BW total: 166152777
+BW 95th percentile: 0
+
+Monthly bandwidth report 12
+Month: Dec 2009
+BW in: 700923871
+BW out: 994678545
+BW total: 1695602416
+BW 95th percentile: 0
+
+Monthly bandwidth report 13
+Month: Jan 2010
+BW in: 944185479
+BW out: 607928402
+BW total: 1552113881
+BW 95th percentile: 0
+
+Monthly bandwidth report 14
+Month: Feb 2010
+BW in: 590574605
+BW out: 769736357
+BW total: 1360310962
+BW 95th percentile: 0
+
+Monthly bandwidth report 15
+Month: Mar 2010
+BW in: 182751972
+BW out: 751980385
+BW total: 934732357
+BW 95th percentile: 0
+
+Monthly bandwidth report 16
+Month: Apr 2010
+BW in: 993047098
+BW out: 973089725
+BW total: 1966136823
+BW 95th percentile: 0
+
+Monthly bandwidth report 17
+Month: May 2010
+BW in: 783430898
+BW out: 766320930
+BW total: 1549751828
+BW 95th percentile: 0
+
+Monthly bandwidth report 18
+Month: Jun 2010
+BW in: 258255006
+BW out: 36317520
+BW total: 294572526
+BW 95th percentile: 0
+
+Monthly bandwidth report 19
+Month: Jul 2010
+BW in: 270562294
+BW out: 357169319
+BW total: 627731613
+BW 95th percentile: 0
+
+Monthly bandwidth report 20
+Month: Aug 2010
+BW in: 578699763
+BW out: 594464793
+BW total: 1173164556
+BW 95th percentile: 0
+
+Monthly bandwidth report 21
+Month: Sep 2010
+BW in: 923430600
+BW out: 1001470159
+BW total: 1924900759
+BW 95th percentile: 0
+
+Monthly bandwidth report 22
+Month: Oct 2010
+BW in: 560386995
+BW out: 332257162
+BW total: 892644157
+BW 95th percentile: 0
+
+Monthly bandwidth report 23
+Month: Nov 2010
+BW in: 533844619
+BW out: 835057509
+BW total: 1368902128
+BW 95th percentile: 0
+
+Monthly bandwidth report 24
+Month: Dec 2010
+BW in: 66601983
+BW out: 59945506
+BW total: 126547489
+BW 95th percentile: 0
+
+Monthly bandwidth report 25
+Month: Jan 2011
+BW in: 451529608
+BW out: 415455039
+BW total: 866984647
+BW 95th percentile: 0
+
+Monthly bandwidth report 26
+Month: Feb 2011
+BW in: 284631969
+BW out: 97680153
+BW total: 382312122
+BW 95th percentile: 0
+
+Monthly bandwidth report 27
+Month: Mar 2011
+BW in: 564552118
+BW out: 426812132
+BW total: 991364250
+BW 95th percentile: 0
+
+Monthly bandwidth report 28
+Month: Apr 2011
+BW in: 947731148
+BW out: 607183105
+BW total: 1554914253
+BW 95th percentile: 0
+
+Monthly bandwidth report 29
+Month: May 2011
+BW in: 953613132
+BW out: 640049658
+BW total: 1593662790
+BW 95th percentile: 0
+
+Monthly bandwidth report 30
+Month: Jun 2011
+BW in: 236439908
+BW out: 470197871
+BW total: 706637779
+BW 95th percentile: 0
+
+Monthly bandwidth report 31
+Month: Jul 2011
+BW in: 277961016
+BW out: 709332023
+BW total: 987293039
+BW 95th percentile: 0
+
+Monthly bandwidth report 32
+Month: Aug 2011
+BW in: 1003957067
+BW out: 60833833
+BW total: 1064790900
+BW 95th percentile: 0
+
+Monthly bandwidth report 33
+Month: Sep 2011
+BW in: 763716660
+BW out: 15864745
+BW total: 779581405
+BW 95th percentile: 0
+
+Monthly bandwidth report 34
+Month: Oct 2011
+BW in: 344579576
+BW out: 847272153
+BW total: 1191851729
+BW 95th percentile: 0
+
+Monthly bandwidth report 35
+Month: Nov 2011
+BW in: 1026086667
+BW out: 779200287
+BW total: 1805286954
+BW 95th percentile: 0
+
+Monthly bandwidth report 36
+Month: Dec 2011
+BW in: 346187492
+BW out: 245580335
+BW total: 591767827
+BW 95th percentile: 0
+
+Monthly bandwidth report 37
+Month: Jan 2012
+BW in: 294251145
+BW out: 113360608
+BW total: 407611753
+BW 95th percentile: 0
+
+Monthly bandwidth report 38
+Month: Feb 2012
+BW in: 736525005
+BW out: 209203123
+BW total: 945728128
+BW 95th percentile: 0
+
+Monthly bandwidth report 39
+Month: Mar 2012
+BW in: 542576146
+BW out: 368666708
+BW total: 911242854
+BW 95th percentile: 0
+
+Monthly bandwidth report 40
+Month: Apr 2012
+BW in: 460833925
+BW out: 109127970
+BW total: 569961895
+BW 95th percentile: 0
+
+Monthly bandwidth report 41
+Month: May 2012
+BW in: 541326419
+BW out: 530629098
+BW total: 1071955517
+BW 95th percentile: 0
+
+Monthly bandwidth report 42
+Month: Jun 2012
+BW in: 318206748
+BW out: 841038756
+BW total: 1159245504
+BW 95th percentile: 0
+
+Monthly bandwidth report 43
+Month: Jul 2012
+BW in: 467348415
+BW out: 895366945
+BW total: 1362715360
+BW 95th percentile: 0
+
+Monthly bandwidth report 44
+Month: Aug 2012
+BW in: 408537606
+BW out: 356618766
+BW total: 765156372
+BW 95th percentile: 0
+
+Monthly bandwidth report 45
+Month: Sep 2012
+BW in: 892331605
+BW out: 724813724
+BW total: 1617145329
+BW 95th percentile: 0
+
+Monthly bandwidth report 46
+Month: Oct 2012
+BW in: 156446210
+BW out: 704254458
+BW total: 860700668
+BW 95th percentile: 0
+
+Monthly bandwidth report 47
+Month: Nov 2012
+BW in: 120729410
+BW out: 108501891
+BW total: 229231301
+BW 95th percentile: 0
+
+Monthly bandwidth report 48
+Month: Dec 2012
+BW in: 316503776
+BW out: 214098576
+BW total: 530602352
+BW 95th percentile: 0
+
+Monthly bandwidth report 49
+Month: Jan 2013
+BW in: 1071254914
+BW out: 499553162
+BW total: 1570808076
+BW 95th percentile: 0
+
+Monthly bandwidth report 50
+Month: Feb 2013
+BW in: 642282325
+BW out: 517979874
+BW total: 1160262199
+BW 95th percentile: 0
+
+Monthly bandwidth report 51
+Month: Mar 2013
+BW in: 490477932
+BW out: 293071653
+BW total: 783549585
+BW 95th percentile: 0
+
+Monthly bandwidth report 52
+Month: Apr 2013
+BW in: 107600662
+BW out: 746071144
+BW total: 853671806
+BW 95th percentile: 0
+
+Monthly bandwidth report 53
+Month: May 2013
+BW in: 69267546
+BW out: 39051633
+BW total: 108319179
+BW 95th percentile: 0
+
+Monthly bandwidth report 54
+Month: Jun 2013
+BW in: 877170831
+BW out: 451191509
+BW total: 1328362340
+BW 95th percentile: 0
+
+Monthly bandwidth report 55
+Month: Jul 2013
+BW in: 764028949
+BW out: 738528024
+BW total: 1502556973
+BW 95th percentile: 0
+
+Monthly bandwidth report 56
+Month: Aug 2013
+BW in: 64606959
+BW out: 584946423
+BW total: 649553382
+BW 95th percentile: 0
+
+Monthly bandwidth report 57
+Month: Sep 2013
+BW in: 179215733
+BW out: 127311938
+BW total: 306527671
+BW 95th percentile: 0
+
+Monthly bandwidth report 58
+Month: Oct 2013
+BW in: 1002613275
+BW out: 821073741
+BW total: 1823687016
+BW 95th percentile: 0
+
+Monthly bandwidth report 59
+Month: Nov 2013
+BW in: 391125274
+BW out: 162918311
+BW total: 554043585
+BW 95th percentile: 0
+
+Monthly bandwidth report 60
+Month: Dec 2013
+BW in: 667227240
+BW out: 942091538
+BW total: 1609318778
+BW 95th percentile: 0
+
+Monthly bandwidth report 61
+Month: Jan 2014
+BW in: 681068961
+BW out: 1061702633
+BW total: 1742771594
+BW 95th percentile: 0
+
+Monthly bandwidth report 62
+Month: Feb 2014
+BW in: 1028682370
+BW out: 301272942
+BW total: 1329955312
+BW 95th percentile: 0
+
+Monthly bandwidth report 63
+Month: Mar 2014
+BW in: 622754076
+BW out: 715674856
+BW total: 1338428932
+BW 95th percentile: 0
+
+Monthly bandwidth report 64
+Month: Apr 2014
+BW in: 124850924
+BW out: 185749253
+BW total: 310600177
+BW 95th percentile: 0
+
+Monthly bandwidth report 65
+Month: May 2014
+BW in: 870598654
+BW out: 522426429
+BW total: 1393025083
+BW 95th percentile: 0
+
+Monthly bandwidth report 66
+Month: Jun 2014
+BW in: 211690031
+BW out: 43022983
+BW total: 254713014
+BW 95th percentile: 0
+
+Monthly bandwidth report 67
+Month: Jul 2014
+BW in: 800126206
+BW out: 1016595874
+BW total: 1816722080
+BW 95th percentile: 0
+
+Monthly bandwidth report 68
+Month: Aug 2014
+BW in: 692391860
+BW out: 248254765
+BW total: 940646625
+BW 95th percentile: 0
+
+Monthly bandwidth report 69
+Month: Sep 2014
+BW in: 423028435
+BW out: 645877427
+BW total: 1068905862
+BW 95th percentile: 0
+
+Monthly bandwidth report 70
+Month: Oct 2014
+BW in: 771771209
+BW out: 428296781
+BW total: 1200067990
+BW 95th percentile: 0
+
+Monthly bandwidth report 71
+Month: Nov 2014
+BW in: 18196113
+BW out: 1031087920
+BW total: 1049284033
+BW 95th percentile: 0
+
+Monthly bandwidth report 72
+Month: Dec 2014
+BW in: 666331639
+BW out: 153803580
+BW total: 820135219
+BW 95th percentile: 0
+
+Monthly bandwidth report 73
+Month: Jan 2015
+BW in: 660206764
+BW out: 645241610
+BW total: 1305448374
+BW 95th percentile: 0
+
+Monthly bandwidth report 74
+Month: Feb 2015
+BW in: 525038725
+BW out: 1067159295
+BW total: 1592198020
+BW 95th percentile: 0
+
+Monthly bandwidth report 75
+Month: Mar 2015
+BW in: 179630439
+BW out: 569171858
+BW total: 748802297
+BW 95th percentile: 0
+
+Monthly bandwidth report 76
+Month: Apr 2015
+BW in: 896715124
+BW out: 908336603
+BW total: 1805051727
+BW 95th percentile: 0
+
+Monthly bandwidth report 77
+Month: May 2015
+BW in: 906067744
+BW out: 773932610
+BW total: 1680000354
+BW 95th percentile: 0
+
+Monthly bandwidth report 78
+Month: Jun 2015
+BW in: 910652735
+BW out: 502517122
+BW total: 1413169857
+BW 95th percentile: 0
+
+Monthly bandwidth report 79
+Month: Jul 2015
+BW in: 338131105
+BW out: 880069543
+BW total: 1218200648
+BW 95th percentile: 0
+
+Monthly bandwidth report 80
+Month: Aug 2015
+BW in: 123317067
+BW out: 427334513
+BW total: 550651580
+BW 95th percentile: 0
+
+Monthly bandwidth report 81
+Month: Sep 2015
+BW in: 987942532
+BW out: 691421577
+BW total: 1679364109
+BW 95th percentile: 0
+
+Monthly bandwidth report 82
+Month: Oct 2015
+BW in: 654334678
+BW out: 241602520
+BW total: 895937198
+BW 95th percentile: 0
+
+Monthly bandwidth report 83
+Month: Nov 2015
+BW in: 526837992
+BW out: 21583975
+BW total: 548421967
+BW 95th percentile: 0
+
+Monthly bandwidth report 84
+Month: Dec 2015
+BW in: 858562040
+BW out: 236361682
+BW total: 1094923722
+BW 95th percentile: 0
+
+Monthly bandwidth report 85
+Month: Jan 2016
+BW in: 508661900
+BW out: 754358509
+BW total: 1263020409
+BW 95th percentile: 0
+
+Monthly bandwidth report 86
+Month: Feb 2016
+BW in: 398045305
+BW out: 818989670
+BW total: 1217034975
+BW 95th percentile: 0
+
+Monthly bandwidth report 87
+Month: Mar 2016
+BW in: 464888925
+BW out: 238930458
+BW total: 703819383
+BW 95th percentile: 0
+
+Monthly bandwidth report 88
+Month: Apr 2016
+BW in: 923895424
+BW out: 723722864
+BW total: 1647618288
+BW 95th percentile: 0
+
+Monthly bandwidth report 89
+Month: May 2016
+BW in: 395370993
+BW out: 874878789
+BW total: 1270249782
+BW 95th percentile: 0
+
+Monthly bandwidth report 90
+Month: Jun 2016
+BW in: 714808001
+BW out: 1051254289
+BW total: 1766062290
+BW 95th percentile: 0
+
+Monthly bandwidth report 91
+Month: Jul 2016
+BW in: 190636131
+BW out: 131433452
+BW total: 322069583
+BW 95th percentile: 0
+
+Monthly bandwidth report 92
+Month: Aug 2016
+BW in: 6118813
+BW out: 301426795
+BW total: 307545608
+BW 95th percentile: 0
+
+Monthly bandwidth report 93
+Month: Sep 2016
+BW in: 699453127
+BW out: 377095251
+BW total: 1076548378
+BW 95th percentile: 0
+
+Monthly bandwidth report 94
+Month: Oct 2016
+BW in: 210697062
+BW out: 26193595
+BW total: 236890657
+BW 95th percentile: 0
+
+Monthly bandwidth report 95
+Month: Nov 2016
+BW in: 105943138
+BW out: 189874737
+BW total: 295817875
+BW 95th percentile: 0
+
+Monthly bandwidth report 96
+Month: Dec 2016
+BW in: 983865483
+BW out: 616700715
+BW total: 1600566198
+BW 95th percentile: 0
+
+Monthly bandwidth report 97
+Month: Jan 2017
+BW in: 522560359
+BW out: 344436695
+BW total: 866997054
+BW 95th percentile: 0
+
+Monthly bandwidth report 98
+Month: Feb 2017
+BW in: 514096072
+BW out: 400516359
+BW total: 914612431
+BW 95th percentile: 0
+
+Monthly bandwidth report 99
+Month: Mar 2017
+BW in: 376753241
+BW out: 424729119
+BW total: 801482360
+BW 95th percentile: 0
+
+Monthly bandwidth report 100
+Month: Apr 2017
+BW in: 700707411
+BW out: 638622789
+BW total: 1339330200
+BW 95th percentile: 0
+
+Monthly bandwidth report 101
+Month: May 2017
+BW in: 860421392
+BW out: 288677042
+BW total: 1149098434
+BW 95th percentile: 0
+
+Monthly bandwidth report 102
+Month: Jun 2017
+BW in: 558497394
+BW out: 499013753
+BW total: 1057511147
+BW 95th percentile: 0
+
+Monthly bandwidth report 103
+Month: Jul 2017
+BW in: 171126553
+BW out: 77725454
+BW total: 248852007
+BW 95th percentile: 0
+
+Monthly bandwidth report 104
+Month: Aug 2017
+BW in: 443447677
+BW out: 667137285
+BW total: 1110584962
+BW 95th percentile: 0
+
+Monthly bandwidth report 105
+Month: Sep 2017
+BW in: 923779009
+BW out: 186929870
+BW total: 1110708879
+BW 95th percentile: 0
+
+Monthly bandwidth report 106
+Month: Oct 2017
+BW in: 107146129
+BW out: 536994139
+BW total: 644140268
+BW 95th percentile: 0
+
+Monthly bandwidth report 107
+Month: Nov 2017
+BW in: 165261541
+BW out: 145804601
+BW total: 311066142
+BW 95th percentile: 0
+
+Monthly bandwidth report 108
+Month: Dec 2017
+BW in: 236698381
+BW out: 856509079
+BW total: 1093207460
+BW 95th percentile: 0
+
+Monthly bandwidth report 109
+Month: Jan 2018
+BW in: 685302764
+BW out: 352907882
+BW total: 1038210646
+BW 95th percentile: 0
+
+Monthly bandwidth report 110
+Month: Feb 2018
+BW in: 615891215
+BW out: 149742740
+BW total: 765633955
+BW 95th percentile: 0
+
+Monthly bandwidth report 111
+Month: Mar 2018
+BW in: 884628736
+BW out: 832368445
+BW total: 1716997181
+BW 95th percentile: 0
+
+Monthly bandwidth report 112
+Month: Apr 2018
+BW in: 130418543
+BW out: 318787162
+BW total: 449205705
+BW 95th percentile: 0
+
+Monthly bandwidth report 113
+Month: May 2018
+BW in: 844234849
+BW out: 855086412
+BW total: 1699321261
+BW 95th percentile: 0
+
+Monthly bandwidth report 114
+Month: Jun 2018
+BW in: 296429310
+BW out: 120452229
+BW total: 416881539
+BW 95th percentile: 0
+
+Monthly bandwidth report 115
+Month: Jul 2018
+BW in: 798576209
+BW out: 523379064
+BW total: 1321955273
+BW 95th percentile: 0
+
+Monthly bandwidth report 116
+Month: Aug 2018
+BW in: 346969622
+BW out: 1044383697
+BW total: 1391353319
+BW 95th percentile: 0
+
+Monthly bandwidth report 117
+Month: Sep 2018
+BW in: 174171378
+BW out: 76185211
+BW total: 250356589
+BW 95th percentile: 0
+
+Monthly bandwidth report 118
+Month: Oct 2018
+BW in: 190832896
+BW out: 975700911
+BW total: 1166533807
+BW 95th percentile: 0
+
+Monthly bandwidth report 119
+Month: Nov 2018
+BW in: 646677880
+BW out: 580846882
+BW total: 1227524762
+BW 95th percentile: 0
+
+Monthly bandwidth report 120
+Month: Dec 2018
+BW in: 130300242
+BW out: 621727673
+BW total: 752027915
+BW 95th percentile: 0
+
+Monthly bandwidth report 121
+Month: Jan 2019
+BW in: 1007389397
+BW out: 617301599
+BW total: 1624690996
+BW 95th percentile: 0
+
+Monthly bandwidth report 122
+Month: Feb 2019
+BW in: 176156408
+BW out: 992755090
+BW total: 1168911498
+BW 95th percentile: 0
+
+Monthly bandwidth report 123
+Month: Mar 2019
+BW in: 82728608
+BW out: 446871343
+BW total: 529599951
+BW 95th percentile: 0
+
+Monthly bandwidth report 124
+Month: Apr 2019
+BW in: 451439173
+BW out: 376755757
+BW total: 828194930
+BW 95th percentile: 0
+
+Monthly bandwidth report 125
+Month: May 2019
+BW in: 107738313
+BW out: 731328816
+BW total: 839067129
+BW 95th percentile: 0
+
+Monthly bandwidth report 126
+Month: Jun 2019
+BW in: 788955418
+BW out: 23845359
+BW total: 812800777
+BW 95th percentile: 0
+
+Monthly bandwidth report 127
+Month: Jul 2019
+BW in: 882579726
+BW out: 550964670
+BW total: 1433544396
+BW 95th percentile: 0
+
+Monthly bandwidth report 128
+Month: Aug 2019
+BW in: 827735876
+BW out: 28052947
+BW total: 855788823
+BW 95th percentile: 0
+
+Monthly bandwidth report 129
+Month: Sep 2019
+BW in: 158258498
+BW out: 239710231
+BW total: 397968729
+BW 95th percentile: 0
+
+Monthly bandwidth report 130
+Month: Oct 2019
+BW in: 728520727
+BW out: 389781963
+BW total: 1118302690
+BW 95th percentile: 0
+
+Monthly bandwidth report 131
+Month: Nov 2019
+BW in: 855037967
+BW out: 322995448
+BW total: 1178033415
+BW 95th percentile: 0
+
+Monthly bandwidth report 132
+Month: Dec 2019
+BW in: 942302899
+BW out: 400399944
+BW total: 1342702843
+BW 95th percentile: 0
+
+Monthly bandwidth report 133
+Month: Jan 2020
+BW in: 913702071
+BW out: 136504255
+BW total: 1050206326
+BW 95th percentile: 0
+
+Monthly bandwidth report 134
+Month: Feb 2020
+BW in: 362822760
+BW out: 89076329
+BW total: 451899089
+BW 95th percentile: 0
+
+Monthly bandwidth report 135
+Month: Mar 2020
+BW in: 1028713528
+BW out: 334739293
+BW total: 1363452821
+BW 95th percentile: 0
+
+Monthly bandwidth report 136
+Month: Apr 2020
+BW in: 209831198
+BW out: 104455881
+BW total: 314287079
+BW 95th percentile: 0
+
+Monthly bandwidth report 137
+Month: May 2020
+BW in: 222607639
+BW out: 1067905365
+BW total: 1290513004
+BW 95th percentile: 0
+
+Monthly bandwidth report 138
+Month: Jun 2020
+BW in: 216095166
+BW out: 267327136
+BW total: 483422302
+BW 95th percentile: 0
+
+Monthly bandwidth report 139
+Month: Jul 2020
+BW in: 656212036
+BW out: 211405276
+BW total: 867617312
+BW 95th percentile: 0
+
+Forward Dns Domains
+
+Forward Dns Domain 1
+Domain Id: 1
+Domain Name: mydomain.com
+Hosting type: Primary
+Expiry date: 01 01 12
+Primary NS:
+Authority status: True
+Secondary transfer status: False
+
+Forward Dns Domain 2
+Domain Id: 2
+Domain Name: myotherdomain.com
+Hosting type: Secondary
+Expiry date:
+Primary NS: 127.0.0.1
+Authority status: True
+Secondary transfer status: True
+
+Reverse Dns Entries
+Reverse DNS Entry 1
+IP Address: 10.0.0.1
+Host Name: test1.foo.com
+
+Reverse DNS Entry 2
+IP Address: 10.0.1.1
+Host Name: testvps.foo.com
+
+
+Press any key to continue...

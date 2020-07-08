@@ -1,0 +1,298 @@
+Index
+
+<ul>
+		<li><a href="serverlist.php">Server List</a></li>
+		<li><a href="forwarddns.php">Forward DNS</a></li>
+		<li><a href="reversedns.php">Reverse DNS</a></li>
+		<li><a href="alltests.php">All Tests</a></li>
+		<li><a href="searchservers.php">Search Servers</a></li>
+		<li><a href="shop.php">Shop</a></li>
+	</ul>
+
+serverlist.php
+
+<?php
+	foreach ($servers as $server) {
+?>
+			<tr>
+				<td><a href='server.php?serviceid=<?php echo $server->ServiceID ?>'><?php echo $server->ServiceID; ?></a></td>
+				<td><?php echo $server->ServiceType; ?></td>
+				<td><?php echo $server->PrimaryIP; ?></td>
+				<td><?php echo $server->Location; ?></td>
+				<td><?php echo $server->YourReference; ?></td>
+				<td><?php echo $server->Status; ?></td>
+			</tr>
+<?php
+	}
+?>
+
+server.php
+
+<div class="page">
+
+		<div class="right">
+
+			<fieldset>
+				<legend>Monitoring
+					&nbsp;&nbsp;
+					[<a href="tests.php?serviceid=<?php echo $serverid ?>">Tests</a>]
+					[<a href="alerts.php?serviceid=<?php echo $serverid ?>">Alerts</a>]
+				</legend>
+
+				<table border="0" cellpadding="1">
+<?php	foreach ($serverStatus as $entry) { ?>
+					<tr>
+						<td><?php echo $entry->StatusCode ?></td>
+						<td><a href="monitorhistory.php?serviceid=<?php echo $serverid; ?>&testid=<?php echo $entry->TestId; ?>"><?php echo $entry->TestName ?></a></td>
+					</tr>
+<?php	} ?>
+				</table>
+			</fieldset>
+
+			<fieldset>
+				<legend>Bandwidth</legend>
+				<a href="bandwidth.php?serviceid=<?php echo $serverDetails->ServiceID; ?>"><img src="<?php echo $serverDetails->BandwidthUrlBase; ?>&gd=overview" /></a>
+			</fieldset>
+
+		</div>
+
+		<div class="left">
+
+			<fieldset>
+				<legend>Server Description</legend>
+
+				<table border="0" cellpadding="2">
+					<tr>
+						<td>Your Reference:</td>
+						<td><?php echo $serverDetails->YourReference; ?></td>
+					</tr>
+					<tr>
+						<td>Location:</td>
+						<td><?php echo $serverDetails->Location; ?></td>
+					</tr>
+					<tr>
+						<td>Primary IP:</td>
+						<td><?php echo $serverDetails->PrimaryIP; ?>&nbsp;&nbsp;[<a href="ipaddresses.php?serviceid=<?php echo $serverid; ?>">Show All</a>]</td>
+					</tr>
+				</table>
+			</fieldset>
+
+			<fieldset>
+				<legend>Service Description</legend>
+				<?php echo str_replace("\n", "<br />", $serverDetails->ServiceDescription); ?>
+			</fieldset>
+
+		</div>
+
+bandwidth.php
+
+<body>
+	<h1>Bandwidth Report: <?php echo $serverid ?></h1>
+
+	<h2>Current Usage</h2>
+
+	<div class="Page">
+
+	<table border="1" cellspacing="0" cellpadding="2">
+		<thead>
+			<tr>
+				<th>Time Period</th>
+				<th>BW In</th>
+				<th>BW Out</th>
+				<th>BW Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Last 4 Hours</td>
+				<td><?php echo $bwreport->BW4hIn; ?></td>
+				<td><?php echo $bwreport->BW4hOut; ?></td>
+				<td><?php echo ($bwreport->BW4hIn + $bwreport->BW4hOut); ?></td>
+			</tr>
+			<tr>
+				<td>Last 24 Hours</td>
+				<td><?php echo $bwreport->BW24hIn; ?></td>
+				<td><?php echo $bwreport->BW24hOut; ?></td>
+				<td><?php echo ($bwreport->BW24hIn + $bwreport->BW24hOut); ?></td>
+			</tr>
+			<tr>
+				<td>So far this month</td>
+				<td><?php echo $bwreport->BWSofarThisMonthIn; ?></td>
+				<td><?php echo $bwreport->BWSofarThisMonthOut; ?></td>
+				<td><?php echo ($bwreport->BWSofarThisMonthIn + $bwreport->BWSofarThisMonthOut); ?></td>
+			</tr>
+			<tr>
+				<td>Predicted this month (24h)</td>
+				<td><?php echo $bwreport->BWPredicted24hIn; ?></td>
+				<td><?php echo $bwreport->BWPredicted24hOut; ?></td>
+				<td><?php echo ($bwreport->BWPredicted24hIn + $bwreport->BWPredicted24hOut); ?></td>
+			</tr>
+			<tr>
+				<td>Predicted this month (14d)</td>
+				<td><?php echo $bwreport->BWPredicted14dIn; ?></td>
+				<td><?php echo $bwreport->BWPredicted14dOut; ?></td>
+				<td><?php echo ($bwreport->BWPredicted14dIn + $bwreport->BWPredicted14dOut); ?></td>
+			</tr>
+		</tbody>
+	</table>
+	Last Updated: <?php echo $bwreport->LastUpdated; ?>
+
+
+	<h2>Historical Monthly Data</h2>
+
+	<table border="1" cellspacing="0" cellpadding="2">
+		<thead>
+			<tr>
+				<th>Month</th>
+				<th>BW In</th>
+				<th>BW Out</th>
+				<th>BW Total</th>
+				<th>95th Percentile</th>
+			</tr>
+		</thead>
+		<tbody>
+<?php	foreach ($monthlybw as $bwentry) { ?>
+			<tr>
+				<td><?php echo $bwentry->Month; ?></td>
+				<td><?php echo $bwentry->BWIn; ?></td>
+				<td><?php echo $bwentry->BWOut; ?></td>
+				<td><?php echo $bwentry->BWTotal; ?></td>
+				<td><?php echo $bwentry->BW95thPercentile; ?></td>
+			</tr>
+<?php	}	?>
+		</tbody>
+	</table>
+
+	<h2>Usage graphs</h2>
+
+	<div style="float: left">
+		<h3>Past 4 Hours (1 minute average)</h3>
+		<img src="<?php echo $serverDetails->BandwidthUrlBase; ?>&timeperiod=4hour" />
+	</div>
+	<div style="float: left">
+		<h3>Past 24 Hours (5 minute average)</h3>
+		<img src="<?php echo $serverDetails->BandwidthUrlBase; ?>&timeperiod=24hour" />
+	</div>
+	<div style="float: left">
+		<h3>Past Week (5 minute average)</h3>
+		<img src="<?php echo $serverDetails->BandwidthUrlBase; ?>&timeperiod=7day" />
+	</div>
+	<div style="float: left">
+		<h3>Past Month (5 minute average)</h3>
+		<img src="<?php echo $serverDetails->BandwidthUrlBase; ?>&timeperiod=1month" />
+	</div>
+	<div style="float: left">
+		<h3>Past Year (5 minute average)</h3>
+		<img src="<?php echo $serverDetails->BandwidthUrlBase; ?>&timeperiod=1year" />
+	</div>
+
+	</div>
+
+</body>
+
+monitorhistory.php
+
+<body>
+	<h1>Test History</h1>
+
+	<table border="1" cellspacing="0">
+		<thead>
+			<tr>
+				<th>Date</th>
+				<th>Status</th>
+				<th>Detail</th>
+			</tr>
+		</thead>
+		<tbody>
+<?php
+	foreach ($history as $entry) {
+?>
+			<tr>
+				<td><?php echo $entry->Date; ?></a></td>
+				<td><?php echo $entry->StatusCode; ?></td>
+				<td><?php echo $entry->StatusDetail; ?></td>
+			</tr>
+<?php
+	}
+?>
+		</tbody>
+	</table>
+
+</body>
+
+tests.php
+
+GetTestTypes
+GetServerStatus
+
+	<h1>Tests: <?php echo $serverid ?></h1>
+
+	<table border="1" cellpadding="2" cellspacing="0">
+		<thead>
+			<tr>
+				<th>&nbsp;</th>
+				<th>Service</th>
+				<th>Args</th>
+				<th>IP Address</th>
+				<th>Last Updated</th>
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+<?php	foreach ($status as $test) {	?>
+			<tr>
+				<td><?php echo $test->StatusCode; ?></td>
+				<td><?php echo $test->TestName; ?></td>
+				<td><?php echo $test->TestArg1; ?></td>
+				<td><?php echo $test->MonitoredIp; ?></td>
+				<td><?php echo $test->LastUpdated; ?></td>
+				<td><a href="deletetest.php?serviceid=<?php echo $serverid; ?>&testid=<?php echo $test->TestId; ?>">Del</a></td>
+			</tr>
+<?php	}	?>
+		</tbody>
+	</table>
+
+alerts.php
+
+<table border="1" cellpadding="2" cellspacing="0">
+		<thead>
+			<tr>
+				<th>Alert Type</th>
+				<th>Destination</th>
+				<th>Init Delay</th>
+				<th>Repeat Delay</th>
+				<th>Alert On</th>
+				<th>&nbsp;</th>
+			</tr>
+		</thead>
+		<tbody>
+<?php	foreach ($alerts as $alert) {	?>
+			<tr>
+				<td><?php echo $alert->AlertType; ?></td>
+				<td><?php echo $alert->Destination; ?></td>
+				<td><?php echo $alert->InitialDelay; ?></td>
+				<td><?php echo $alert->RepeatDelay; ?></td>
+				<td><?php echo ($alert->AlertOnWarning ? "Warn " : "") . ($alert->AlertOnFailure ? "Fail " : ""); ?></td>
+				<td><a href="deletealert.php?serviceid=<?php echo $serverid; ?>&alertid=<?php echo $alert->AlertId; ?>">Del</a></td>
+			</tr>
+<?php	}	?>
+		</tbody>
+	</table>
+	
+Forward dns
+
+GetForwardDnsDomains(authInfo);
+
+forwardDNSDomain.HostingType
+forwardDNSDomain.ExpiryDate
+forwardDNSDomain.PrimaryNS
+forwardDNSDomain.AuthorityStatus
+forwardDNSDomain.SecondaryTransferStatus
+
+Reverse dns
+
+GetReverseDnsEntries(authInfo);
+
+reverseDNSDomain.IPAddress
+reverseDNSDomain.HostName
+
