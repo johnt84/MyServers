@@ -10,12 +10,12 @@
                 <table id="datatableformat" class="table table-hover table-striped table-bordered no-wrap">
                     <thead>
                         <tr class="nowrap">
-                            <th style="width: 95px">Service ID</th>
-                            <th style="width: 55px">Service Type</th>
-                            <th style="width: 125px">Primary IP</th>
-                            <th style="width: 125px">Location</th>
-                            <th style="width: 155px">Your Reference</th>
-                            <th style="width: 95px">Status</th>
+                            <th style="width: 85px">Service ID</th>
+                            <th style="width: 90px">Service Type</th>
+                            <th style="width: 65px">Primary IP</th>
+                            <th style="width: 170px">Location</th>
+                            <th style="width: 95px">Your Reference</th>
+                            <th style="width: 60px">Status</th>
                         </tr>
                     </thead>
             </HeaderTemplate>

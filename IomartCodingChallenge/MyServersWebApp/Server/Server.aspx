@@ -70,7 +70,7 @@
 
             <table>
                 <tr>
-			        <td>Your Reference:</td>
+			        <td style="width: 125px;">Your Reference:</td>
 			        <td><asp:Label ID="lbYourReference" runat="server"></asp:Label></td>
 		        </tr>
 		        <tr>

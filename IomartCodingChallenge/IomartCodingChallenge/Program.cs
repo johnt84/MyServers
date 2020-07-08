@@ -1,19 +1,23 @@
 ﻿using IomartCodingChallenge.CodingChallengeServiceReference;
 using System;
+using System.Configuration;
 using System.Linq;
 
 namespace MyServersConsoleApp
 {
     class Program
     {
+        private static string MyServersApiUsername => ConfigurationManager.AppSettings["MyServersApiUsername"];
+        private static string MyServersApiPassword => ConfigurationManager.AppSettings["MyServersApiPassword"];
+
         static void Main(string[] args)
         {
             var apiClient = new MyServersApiClient();
 
             var authInfo = new AuthInfo()
             {
-                Username = "C019848@api.rapidswitch.com",
-                Password = "Kh:a6,mgiwem^zrotiwyzfaPz",
+                Username = MyServersApiUsername,
+                Password = MyServersApiPassword,
             };
 
             //server details actions

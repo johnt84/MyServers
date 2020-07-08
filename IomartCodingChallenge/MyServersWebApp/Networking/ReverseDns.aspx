@@ -3,14 +3,14 @@
 <asp:Content ID="PageBodyContent" ContentPlaceHolderID="MainContent" runat="Server">  
     <link rel="stylesheet" type="text/css" href="/Styles/jquery.dataTables.css">
 
-    <div style="width: 1024px;" runat="server">
+    <div style="width: 500px;" runat="server">
         <h1 style="padding-top: 20px;"><%= Page.Title %></h1>
         <asp:Repeater ID="rptReverseDns" runat="server" ItemType="MyServersWebApp.MyServersApiSimulatorService.ReverseDnsEntry">
             <HeaderTemplate>
                 <table id="datatableformat" class="table table-hover table-striped table-bordered no-wrap">
                     <thead>
                         <tr class="nowrap">
-                            <th style="width: 95px">IP Address</th>
+                            <th style="width: 50px">IP Address</th>
                             <th style="width: 55px">Host Name</th>
                         </tr>
                     </thead>

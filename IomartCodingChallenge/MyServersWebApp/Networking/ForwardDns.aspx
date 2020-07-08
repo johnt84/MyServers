@@ -10,12 +10,12 @@
                 <table id="datatableformat" class="table table-hover table-striped table-bordered no-wrap">
                     <thead>
                         <tr class="nowrap">
-                            <th style="width: 95px">Domain Id</th>
-                            <th style="width: 55px">Domain Name</th>
-                            <th style="width: 125px">Hosting type</th>
-                            <th style="width: 125px">Expiry date</th>
-                            <th style="width: 155px">Primary NS</th>
-                            <th style="width: 95px">Authority status</th>
+                            <th style="width: 70px">Domain Id</th>
+                            <th style="width: 85px">Domain Name</th>
+                            <th style="width: 80px">Hosting type</th>
+                            <th style="width: 65px">Expiry date</th>
+                            <th style="width: 65px">Primary NS</th>
+                            <th style="width: 82px">Authority status</th>
                             <th style="width: 95px">Secondary transfer status</th>
                         </tr>
                     </thead>
