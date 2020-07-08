@@ -4,7 +4,7 @@
     <link rel="stylesheet" type="text/css" href="/Styles/jquery.dataTables.css">
 
     <%
-    if(!serviceExists)
+    if(isError)
     { %>
         <div style="color:red; padding-top: 20px; font-size: 18px;" padding-bottom: 20px">
             <ul>

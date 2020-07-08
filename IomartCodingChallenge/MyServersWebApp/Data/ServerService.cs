@@ -36,14 +36,30 @@ namespace MyServersWebApp.Data
             }
         }
 
-        public void SuspendServer(string serviceID, string suspensionReason)
+        public string SuspendServer(string serviceID, string suspensionReason)
         {
-            GlobalSettings.apiClient.SuspendServer(GlobalSettings.authInfo, serviceID, suspensionReason);
+            try
+            {
+                GlobalSettings.apiClient.SuspendServer(GlobalSettings.authInfo, serviceID, suspensionReason);
+                return string.Empty;
+            }
+            catch(Exception ex)
+            {
+                return ex.Message;
+            }
         }
 
-        public void UnsuspendServer(string serviceID)
+        public string UnsuspendServer(string serviceID)
         {
-            GlobalSettings.apiClient.UnsuspendServer(GlobalSettings.authInfo, serviceID);
+            try
+            {
+                GlobalSettings.apiClient.UnsuspendServer(GlobalSettings.authInfo, serviceID);
+                return string.Empty;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
         }
     }
 }
