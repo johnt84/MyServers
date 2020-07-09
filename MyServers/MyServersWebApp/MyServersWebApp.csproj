@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -341,6 +344,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalSettings.cs" />
+    <Compile Include="Model\ServerInfo.cs" />
     <Compile Include="Networking\ForwardDns.aspx.cs">
       <DependentUpon>ForwardDns.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -370,6 +374,7 @@
     <Compile Include="Server\ServerList.aspx.designer.cs">
       <DependentUpon>ServerList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Services\ServerDBService.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

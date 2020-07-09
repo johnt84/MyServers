@@ -1,15 +1,39 @@
 ﻿using MyServersWebApp.MyServersApiSimulatorService;
+using MyServersWebApp.Services;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 
 namespace MyServersWebApp.Data
 {
     public class ServerService : IServerService
     {
-        public List<ServerInfo> GetAllServerDetails()
+        private ServerDBService serverDBService = new ServerDBService();
+        
+        public List<Model.ServerInfo> GetAllServerDetails()
         {
-            return GlobalSettings.apiClient.GetAllServerDetails(GlobalSettings.authInfo).ToList();
+            var dbServerDetails = serverDBService.Get();
+
+            var apiClientServerDetails = GlobalSettings.
+                                            apiClient.GetAllServerDetails(GlobalSettings.authInfo)
+                                            .ToList()
+                                            .Select(x => new Model.ServerInfo()
+                                            {
+                                                ServiceID = x.ServiceID,
+                                                ServiceType = x.ServiceType,
+                                                PrimaryIP = x.PrimaryIP,
+                                                Location = x.Location,
+                                                YourReference = x.YourReference,
+                                                Status = x.Status,
+                                                Suspended = x.Suspended,
+                                            })
+                                            .ToList();
+
+
+            bool fromDatabase = Convert.ToBoolean(ConfigurationManager.AppSettings["AllServerDetailsFromDB"]);
+
+            return fromDatabase ? dbServerDetails : apiClientServerDetails;
         }
 
         public List<CurrentMonitorStatus> GetServerStatus(string serviceID)
