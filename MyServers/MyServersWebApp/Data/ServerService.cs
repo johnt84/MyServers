@@ -13,9 +13,15 @@ namespace MyServersWebApp.Data
         
         public List<Model.ServerInfo> GetAllServerDetails()
         {
-            var dbServerDetails = serverDBService.Get();
+            List<Model.ServerInfo> serverDetails;
 
-            var apiClientServerDetails = GlobalSettings.
+            if(Convert.ToBoolean(ConfigurationManager.AppSettings["AllServerDetailsFromDB"]))
+            {
+                serverDetails = serverDBService.Get();
+            }
+            else
+            {
+                var apiClientServerDetails = GlobalSettings.
                                             apiClient.GetAllServerDetails(GlobalSettings.authInfo)
                                             .ToList()
                                             .Select(x => new Model.ServerInfo()
@@ -30,10 +36,10 @@ namespace MyServersWebApp.Data
                                             })
                                             .ToList();
 
+                serverDetails = apiClientServerDetails;
+            }
 
-            bool fromDatabase = Convert.ToBoolean(ConfigurationManager.AppSettings["AllServerDetailsFromDB"]);
-
-            return fromDatabase ? dbServerDetails : apiClientServerDetails;
+            return serverDetails;
         }
 
         public List<CurrentMonitorStatus> GetServerStatus(string serviceID)
