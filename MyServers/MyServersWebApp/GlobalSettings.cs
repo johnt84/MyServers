@@ -1,8 +1,6 @@
 ﻿using MyServersWebApp.MyServersApiSimulatorService;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace MyServersWebApp
 {
@@ -10,5 +8,9 @@ namespace MyServersWebApp
     {
         public static AuthInfo authInfo;
         public static MyServersApiClient apiClient;
+        public static SqlConnection MyServersDBConnection => new SqlConnection(ConfigurationManager
+                                                                    .ConnectionStrings["MyServersDBConnection"]
+                                                                    .ConnectionString);
+
     }
 }

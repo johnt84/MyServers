@@ -5,7 +5,7 @@ namespace MyServersWebApp.Data
 {
     interface IServerService
     {
-        List<ServerInfo> GetAllServerDetails();
+        List<Model.ServerInfo> GetAllServerDetails();
         List<CurrentMonitorStatus> GetServerStatus(string serviceID);
         ServerInfo GetServerDetails(string serviceID);
         string SuspendServer(string serviceID, string suspensionReason);

@@ -5,7 +5,7 @@
 
     <div style="width: 1024px; font-size: 14px;" runat="server">
         <h1 style="padding-top: 20px;"><%= Page.Title %></h1>
-        <asp:Repeater ID="rptServerList" runat="server" ItemType="MyServersWebApp.MyServersApiSimulatorService.ServerInfo">
+        <asp:Repeater ID="rptServerList" runat="server" ItemType="MyServersWebApp.Model.ServerInfo">
             <HeaderTemplate>
                 <table id="datatableformat" class="table table-hover table-striped table-bordered no-wrap">
                     <thead>
