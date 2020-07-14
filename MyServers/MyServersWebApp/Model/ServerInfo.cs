@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace MyServersWebApp.Model
+﻿namespace MyServersWebApp.Model
 {
     public class ServerInfo
     {
