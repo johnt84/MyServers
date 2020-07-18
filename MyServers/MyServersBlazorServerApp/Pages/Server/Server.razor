@@ -1,0 +1,75 @@
+﻿@page "/server/server/{ServiceID}"
+
+@using MyServersApiSimulatorService
+@using MyServersBlazorServerApp.Data
+@inject IServerService ServerService
+
+<h2>Service Status</h2>
+
+@if (currentMonitorStatuses == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!currentMonitorStatuses.Any())
+{
+    <p><em>There are currently no server statuses</em></p>
+}
+else
+{
+    <table class="table" style="width: 1024px;">
+        <tr>
+            <th style="width: 65px">Status Code</th>
+            <th style="width: 90px">Test Name</th>
+            <th style="width: 60px">Test Arg 1</th>
+            <th style="width: 70px">Monitored Ip</th>
+            <th style="width: 70px">Last Updated</th>
+        </tr>
+        @foreach (var currentMonitorStatus in currentMonitorStatuses)
+        {
+            <tr>
+                <td>@currentMonitorStatus.StatusCode</td>
+                <td>@currentMonitorStatus.TestName </td>
+                <td>@currentMonitorStatus.TestArg1</td>
+                <td>@currentMonitorStatus.MonitoredIp</td>
+                <td>@currentMonitorStatus.LastUpdated.ToString("dd-MMM-yyy")</td>
+            </tr>
+        }
+    </table>
+}
+
+<div class="left">
+    <h2>Server Description</h2>
+
+    <table>
+        <tr>
+            <td style="width: 125px;">Your Reference:</td>
+            <td>@serverDetails.YourReference</td>
+        </tr>
+        <tr>
+            <td>Location:</td>
+            <td>@serverDetails.Location</td>
+        </tr>
+        <tr>
+            <td>Primary IP:</td>
+            <td>@serverDetails.PrimaryIP</td>
+        </tr>
+        <tr>
+            <td>Is Suspended::</td>
+            <td>@(serverDetails.Suspended ? "Yes" : "No")</td>
+        </tr>
+    </table>
+</div>
+
+@code {
+    [Parameter]
+    public string ServiceID { get; set; }
+
+    CurrentMonitorStatus[] currentMonitorStatuses;
+    ServerInfo serverDetails;
+
+    protected async override Task OnInitializedAsync()
+    {
+        currentMonitorStatuses = await ServerService.GetServerStatus(ServiceID);
+        serverDetails = await ServerService.GetServerDetails(ServiceID);
+    }
+}

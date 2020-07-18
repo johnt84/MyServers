@@ -1,0 +1,57 @@
+﻿@page  "/server/serverlist/"
+
+@using MyServersApiSimulatorService
+@using MyServersBlazorServerApp.Data
+@inject IServerService ServerService
+
+<h2>Server List</h2>
+
+@if (allServerDetails == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!allServerDetails.Any())
+{
+    <p><em>There are currently no all server lists</em></p>
+}
+else
+{
+    <table class="table" style="width: 1024px;">
+        <tr>
+            <th style="width: 115px">Service ID</th>
+            <th style="width: 125px">Service Type</th>
+            <th style="width: 105px">Primary IP</th>
+            <th style="width: 195px">Location</th>
+            <th style="width: 145px">Your Reference</th>
+            <th style="width: 60px">Status</th>
+            <th style="width: 130px">Is Suspended</th>
+        </tr>
+        @foreach (var allServerDetail in allServerDetails)
+        {
+            <tr>
+                <td>
+                    <a href="@($"server/server/{allServerDetail.ServiceID}")" class="esh-table-link">
+                        @allServerDetail.ServiceID
+                    </a>
+                </td>
+                <td>@allServerDetail.ServiceType</td>
+                <td>@allServerDetail.PrimaryIP</td>
+                <td>@allServerDetail.Location</td>
+                <td>@allServerDetail.YourReference</td>
+                <td>@allServerDetail.Status</td>
+                <td>
+                    @(allServerDetail.Suspended ? "Yes" : "No")
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+@code {
+    ServerInfo[] allServerDetails;
+
+    protected async override Task OnInitializedAsync()
+    {
+        allServerDetails = await ServerService.GetAllServerDetails();
+    }
+}

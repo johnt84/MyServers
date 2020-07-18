@@ -1,0 +1,51 @@
+﻿@page  "/networking/forwarddns/"
+
+@using MyServersApiSimulatorService
+@using MyServersBlazorServerApp.Data
+@inject IForwardDnsService ForwardDnsService
+
+<h2>Forward Dns</h2>
+
+@if (forwardDnsDomains == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!forwardDnsDomains.Any())
+{
+    <p><em>There are currently no forward dns domains</em></p>
+}
+else
+{
+    <table class="table" style="width: 1024px;">
+        <tr>
+            <th style="width: 100px">Domain Id</th>
+            <th style="width: 125px">Domain Name</th>
+            <th style="width: 120px">Hosting type</th>
+            <th style="width: 105px">Expiry date</th>
+            <th style="width: 105px">Primary NS</th>
+            <th style="width: 135px">Authority status</th>
+            <th style="width: 205px">Secondary transfer status</th>
+        </tr>
+        @foreach (var forwardDnsDomain in forwardDnsDomains)
+        {
+            <tr>
+                <td>@forwardDnsDomain.DomainId</td>
+                <td>@forwardDnsDomain.DomainName</td>
+                <td>@forwardDnsDomain.HostingType</td>
+                <td>@(forwardDnsDomain.ExpiryDate?.ToString("dd-MMM-yyyy") ?? "")</td>
+                <td>@forwardDnsDomain.PrimaryNS</td>
+                <td>@forwardDnsDomain.AuthorityStatus</td>
+                <td>@forwardDnsDomain.SecondaryTransferStatus</td>
+            </tr>
+        }
+    </table>
+}
+
+@code {
+    HostedDomainInfo[] forwardDnsDomains;
+
+    protected async override Task OnInitializedAsync()
+    {
+        forwardDnsDomains = await ForwardDnsService.GetForwardDnsDomains();
+    }
+}

@@ -1,0 +1,41 @@
+﻿@page  "/networking/reversedns/"
+
+@using MyServersApiSimulatorService
+@using MyServersBlazorServerApp.Data
+@inject IReverseDnsService ReverseDnsService
+
+<h2>Reverse Dns</h2>
+
+@if (reverseDnsEntries == null)
+{
+    <p><em>Loading...</em></p>
+}
+else if (!reverseDnsEntries.Any())
+{
+    <p><em>There are currently no reverse dns entries</em></p>
+}
+else
+{
+    <table class="table" style="width: 1024px;">
+        <tr>
+            <th style="width: 50px">IP Address</th>
+            <th style="width: 55px">Host Name</th>
+        </tr>
+        @foreach (var reverseDnsEntry in reverseDnsEntries)
+        {
+            <tr>
+                <td>@reverseDnsEntry.IPAddress</td>
+                <td>@reverseDnsEntry.HostName</td>
+            </tr>
+        }
+    </table>
+}
+
+@code {
+    ReverseDnsEntry[] reverseDnsEntries;
+
+    protected async override Task OnInitializedAsync()
+    {
+        reverseDnsEntries = await ReverseDnsService.GetReverseDnsEntries();
+    }
+}
