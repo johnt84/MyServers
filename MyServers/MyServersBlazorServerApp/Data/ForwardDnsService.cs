@@ -7,7 +7,7 @@ namespace MyServersBlazorServerApp.Data
     {
         private readonly MyServersApiClient _apiClient;
 
-        public ForwardDnsService( MyServersApiClient apiClient)
+        public ForwardDnsService(MyServersApiClient apiClient)
         {
             _apiClient = apiClient;
         }

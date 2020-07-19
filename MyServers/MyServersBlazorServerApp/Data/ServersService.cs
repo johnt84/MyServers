@@ -8,7 +8,7 @@ namespace MyServersBlazorServerApp.Data
     {
         private readonly MyServersApiClient _apiClient;
 
-        public ServersService( MyServersApiClient apiClient)
+        public ServersService(MyServersApiClient apiClient)
         {
             _apiClient = apiClient;
         }
