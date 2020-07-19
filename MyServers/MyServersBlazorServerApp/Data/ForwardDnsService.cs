@@ -5,17 +5,16 @@ namespace MyServersBlazorServerApp.Data
 {
     public class ForwardDnsService : IForwardDnsService
     {
-        MyServersApiClient apiClient = new MyServersApiClient();
+        private readonly MyServersApiClient _apiClient;
 
-        AuthInfo authInfo = new AuthInfo()
+        public ForwardDnsService( MyServersApiClient apiClient)
         {
-            Username = "",
-            Password = "",
-        };
+            _apiClient = apiClient;
+        }
 
         public async Task<HostedDomainInfo[]> GetForwardDnsDomains()
         {
-            return await apiClient.GetForwardDnsDomainsAsync(authInfo);
+            return await _apiClient.GetForwardDnsDomainsAsync(GlobalSettings.authInfo);
         }
     }
 }

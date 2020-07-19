@@ -37,35 +37,42 @@ else
     </table>
 }
 
-<div class="left">
-    <h2>Server Description</h2>
+@if (!string.IsNullOrEmpty(serverDetails.ServiceID))
+{
+    <div class="left" style="padding-bottom: 20px">
+        <h2>Server Description</h2>
 
-    <table>
-        <tr>
-            <td style="width: 125px;">Your Reference:</td>
-            <td>@serverDetails.YourReference</td>
-        </tr>
-        <tr>
-            <td>Location:</td>
-            <td>@serverDetails.Location</td>
-        </tr>
-        <tr>
-            <td>Primary IP:</td>
-            <td>@serverDetails.PrimaryIP</td>
-        </tr>
-        <tr>
-            <td>Is Suspended::</td>
-            <td>@(serverDetails.Suspended ? "Yes" : "No")</td>
-        </tr>
-    </table>
-</div>
+        <table>
+            <tr>
+                <td style="width: 125px;">Your Reference:</td>
+                <td>@serverDetails.YourReference</td>
+            </tr>
+            <tr>
+                <td>Location:</td>
+                <td>@serverDetails.Location</td>
+            </tr>
+            <tr>
+                <td>Primary IP:</td>
+                <td>@serverDetails.PrimaryIP</td>
+            </tr>
+            <tr>
+                <td>Is Suspended::</td>
+                <td>@(serverDetails.Suspended ? "Yes" : "No")</td>
+            </tr>
+        </table>
+    </div>
+}
+
+<a href="/server/serverlist" class="esh-link-item">
+    Back to Server List
+</a>
 
 @code {
     [Parameter]
     public string ServiceID { get; set; }
 
-    CurrentMonitorStatus[] currentMonitorStatuses;
-    ServerInfo serverDetails;
+    private CurrentMonitorStatus[] currentMonitorStatuses;
+    private ServerInfo serverDetails;
 
     protected async override Task OnInitializedAsync()
     {

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MyServersApiSimulatorService;
 using MyServersBlazorServerApp.Data;
 
 namespace MyServersBlazorServerApp
@@ -22,6 +23,14 @@ namespace MyServersBlazorServerApp
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            GlobalSettings.authInfo = new AuthInfo()
+            {
+                Username = Configuration["MyServersApiUsername"],
+                Password = Configuration["MyServersApiPassword"],
+            };
+
+            services.AddSingleton<MyServersApiClient>();
             services.AddScoped<IServerService, ServersService>();
             services.AddScoped<IForwardDnsService, ForwardDnsService>();
             services.AddScoped<IReverseDnsService, ReverseDnsService>();

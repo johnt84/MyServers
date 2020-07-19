@@ -6,24 +6,23 @@ namespace MyServersBlazorServerApp.Data
 {
     public class ServersService : IServerService
     {
-        MyServersApiClient apiClient = new MyServersApiClient();
+        private readonly MyServersApiClient _apiClient;
 
-        AuthInfo authInfo = new AuthInfo()
+        public ServersService( MyServersApiClient apiClient)
         {
-            Username = "",
-            Password = "",
-        };
+            _apiClient = apiClient;
+        }
 
         public async Task<ServerInfo[]> GetAllServerDetails()
         {
-            return await apiClient.GetAllServerDetailsAsync(authInfo);
+            return await _apiClient.GetAllServerDetailsAsync(GlobalSettings.authInfo);
         }
 
         public async Task<CurrentMonitorStatus[]> GetServerStatus(string serviceID)
         {
             try
             {
-                return await apiClient.GetServerStatusAsync(authInfo, serviceID);
+                return await _apiClient.GetServerStatusAsync(GlobalSettings.authInfo, serviceID);
             }
             catch (Exception ex)
             {
@@ -35,7 +34,7 @@ namespace MyServersBlazorServerApp.Data
         {
             try
             {
-                return await apiClient.GetServerDetailsAsync(authInfo, serviceID);
+                return await _apiClient.GetServerDetailsAsync(GlobalSettings.authInfo, serviceID);
             }
             catch (Exception ex)
             {

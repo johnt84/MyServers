@@ -5,17 +5,16 @@ namespace MyServersBlazorServerApp.Data
 {
     public class ReverseDnsService : IReverseDnsService
     {
-        MyServersApiClient apiClient = new MyServersApiClient();
+        private readonly MyServersApiClient _apiClient;
 
-        AuthInfo authInfo = new AuthInfo()
+        public ReverseDnsService(MyServersApiClient apiClient)
         {
-            Username = "",
-            Password = "",
-        };
+            _apiClient = apiClient;
+        }
 
         public async Task<ReverseDnsEntry[]> GetReverseDnsEntries()
         {
-            return await apiClient.GetReverseDnsEntriesAsync(authInfo);
+            return await _apiClient.GetReverseDnsEntriesAsync(GlobalSettings.authInfo);
         }
     }
 }
