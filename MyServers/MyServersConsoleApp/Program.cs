@@ -2,6 +2,8 @@
 using System;
 using System.Configuration;
 using System.Linq;
+using MyServersWebApp.Data.Payment;
+using MyServersWebApp.Model.Payment;
 
 namespace MyServersConsoleApp
 {
@@ -12,6 +14,36 @@ namespace MyServersConsoleApp
 
         static void Main(string[] args)
         {
+            var creditCardPaymentService = new CreditCardPaymentService();
+
+            var creditCardPaymentInput = new CreditCardPaymentInput()
+            {
+                VendorTxCode = Guid.NewGuid().ToString(),
+                CardholderName = "Card Holder",
+                CardNumber = "4929000000006",
+                ExpiryDate = "1120",
+                SecurityCode = "123",
+                Amount = 2000,
+                CustomerFirstName = "Sam",
+                CustomerLastName = "Jones",
+                BillingAddress1 = "88 St. John Street",
+                BillingCity = "London",
+                BillingPostalCode = "412",
+                BillingCountry = "GB",
+                CustomerEmail = "test.emaili@domain.com",
+                CustomerPhone = "0845 111 4455",
+                TransactionDescription = "Testing",
+                ShippingRecipientFirstName = "Sam",
+                ShippingRecipientLastName = "Jones",
+                ShippingAddress1 = "407 St John Street",
+                ShippingCity = "London",
+                ShippingPostalCode = "EC1V 4AB",
+                ShippingCountry = "GB",
+            };
+
+            var transactionResult = creditCardPaymentService.ProcessPayment(creditCardPaymentInput);
+
+
             var apiClient = new MyServersApiClient();
 
             var authInfo = new AuthInfo()
@@ -22,6 +54,8 @@ namespace MyServersConsoleApp
 
             //server details actions
             string testServiceID = "TEST-00001";
+           // var chassisForSale = apiClient.GetAllChassisForSale(authInfo, new Guid("479B1314-8CFE-42CB-AD93-784509575029"), string.Empty);
+            var chassisForSale = apiClient.GetChassisForSale(authInfo, new Guid("479B1314-8CFE-42CB-AD93-784509575029"));
 
             //var testServerDetails = apiClient.GetServerDetails(authInfo, testServiceID);
 
