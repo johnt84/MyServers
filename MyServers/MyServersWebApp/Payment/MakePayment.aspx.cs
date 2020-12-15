@@ -1,6 +1,7 @@
 ﻿using MyServersWebApp.Data.Payment;
 using MyServersWebApp.Model.Payment;
 using System;
+using System.Web.UI.HtmlControls;
 
 namespace MyServersWebApp.Payment
 {
@@ -62,10 +63,16 @@ namespace MyServersWebApp.Payment
 
             ShowAppropriateFields(isA3DSTransaction);
 
-            //if (isA3DSTransaction)
-            //{
-            //    Response.Redirect(transactionResult.acsUrl.Replace("pareq", transactionResult.paReq));
-            //}  
+            if (isA3DSTransaction)
+            {
+                string acsUrl = transactionResult.acsUrl.Replace("pareq", transactionResult.paReq);
+                Response.Redirect(transactionResult.acsUrl.Replace("pareq", transactionResult.paReq));
+                //var iframe = new HtmlGenericControl("iframe");
+                //iframe.Attributes["src"] = Page.ResolveClientUrl("~/Payment/ValidatePayment.aspx") +
+                //    $"?PaReq={transactionResult.paReq}&ACSURL={acsUrl}";
+                //iframe.Attributes["class"] = "Card3DSecure";
+                //ph3DSecure.Controls.Add(iframe);
+            }
         }
 
         private void ShowAppropriateFields(bool isA3DSTransaction)
