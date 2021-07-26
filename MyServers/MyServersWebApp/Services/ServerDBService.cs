@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace MyServersWebApp.Services
 {
-    public class ServerDBService
+    public class ServerDBService : IServerDBService
     {
         private IDbConnection Connection => GlobalSettings.MyServersDBConnection;
 

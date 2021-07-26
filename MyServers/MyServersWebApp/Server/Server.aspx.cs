@@ -1,6 +1,8 @@
 ﻿using MyServersWebApp.Data;
 using MyServersWebApp.MyServersApiSimulatorService;
 using System;
+using System.Threading.Tasks;
+using System.Web.UI;
 
 namespace MyServersWebApp.Server
 {
@@ -8,11 +10,11 @@ namespace MyServersWebApp.Server
     {
         protected string serviceID;
         protected ServerInfo serverDetails;
-        private ServerService serverService;
+        private IServerService serverService;
         protected bool isError;
         protected bool actionCompleted;
 
-        protected void Page_Load(object sender, EventArgs e)
+        protected async void Page_Load(object sender, EventArgs e)
         {
             serviceID = Request.QueryString["serviceid"];
 
@@ -25,11 +27,11 @@ namespace MyServersWebApp.Server
                 return;
             }
 
-            serverService = new ServerService();
+            serverService = GlobalSettings.Container.GetInstance<IServerService>();
 
             if (!Page.IsPostBack)
             {
-                PopulatePage();
+                await PopulatePageAsync();
 
                 if (string.IsNullOrEmpty(serverDetails.ServiceID))
                 {
@@ -42,9 +44,9 @@ namespace MyServersWebApp.Server
             InitialisePage();
         }
 
-        protected void btnSuspendServer_Click(object sender, EventArgs e)
+        protected async void btnSuspendServer_Click(object sender, EventArgs e)
         {
-            string suspendResult = serverService.SuspendServer(serviceID, txtSuspensionReason.Text);
+            string suspendResult = await serverService.SuspendServer(serviceID, txtSuspensionReason.Text);
 
             if (!string.IsNullOrEmpty(suspendResult))
             {
@@ -55,12 +57,12 @@ namespace MyServersWebApp.Server
                 ActionCompleted("Server suspended successfully");
             }
 
-            PopulatePage();
+            await PopulatePageAsync();
         }
 
-        protected void btnUnsuspendServer_Click(object sender, EventArgs e)
+        protected async void btnUnsuspendServer_Click(object sender, EventArgs e)
         {
-            string unsuspendResult = serverService.UnsuspendServer(serviceID);
+            string unsuspendResult = await serverService.UnsuspendServer(serviceID);
 
             if(!string.IsNullOrEmpty(unsuspendResult))
             {
@@ -70,13 +72,11 @@ namespace MyServersWebApp.Server
             {
                 ActionCompleted("Server unsuspended successfully");
             }
-
-            PopulatePage();
         }
 
-        private void PopulatePage()
+        private async Task PopulatePageAsync()
         {
-            rptServerStatus.DataSource = serverService.GetServerStatus(serviceID);
+            rptServerStatus.DataSource = await serverService.GetServerStatus(serviceID);
             rptServerStatus.DataBind();
 
             serverDetails = serverService.GetServerDetails(serviceID);

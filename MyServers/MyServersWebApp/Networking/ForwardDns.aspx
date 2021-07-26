@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ForwardDns.aspx.cs" Inherits="MyServersWebApp.Networking.ForwardDns" %>
+﻿<%@ Page Async="true" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ForwardDns.aspx.cs" Inherits="MyServersWebApp.Networking.ForwardDns" %>
 
 <asp:Content ID="PageBodyContent" ContentPlaceHolderID="MainContent" runat="Server">  
     <link rel="stylesheet" type="text/css" href="/Styles/jquery.dataTables.css">

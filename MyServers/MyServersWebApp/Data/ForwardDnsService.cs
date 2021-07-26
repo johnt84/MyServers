@@ -1,14 +1,17 @@
 ﻿using MyServersWebApp.MyServersApiSimulatorService;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MyServersWebApp.Data
 {
     public class ForwardDnsService : IForwardDnsService
     {
-        public List<HostedDomainInfo> GetForwardDnsDomains()
+        public async Task<List<HostedDomainInfo>> GetForwardDnsDomains()
         {
-            return GlobalSettings.apiClient.GetForwardDnsDomains(GlobalSettings.authInfo).ToList();
+            var forwardDnsDomains = await GlobalSettings.apiClient.GetForwardDnsDomainsAsync(GlobalSettings.authInfo);
+
+            return forwardDnsDomains.ToList();
         }
     }
 }
