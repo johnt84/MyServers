@@ -4,49 +4,60 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace MyServersWebApp.Data
 {
     public class ServerService : IServerService
     {
-        private ServerDBService serverDBService = new ServerDBService();
+        private readonly IServerDBService _serverDBService;
+
+        public ServerService(IServerDBService serverDBService)
+        {
+            _serverDBService = serverDBService;
+        }
         
-        public List<Model.ServerInfo> GetAllServerDetails()
+        public async Task<List<Model.ServerInfo>> GetAllServerDetails()
         {
             List<Model.ServerInfo> serverDetails;
 
             if(Convert.ToBoolean(ConfigurationManager.AppSettings["AllServerDetailsFromDB"]))
             {
-                serverDetails = serverDBService.Get();
+                serverDetails = _serverDBService.Get();
             }
             else
             {
-                var apiClientServerDetails = GlobalSettings.
-                                            apiClient.GetAllServerDetails(GlobalSettings.authInfo)
-                                            .ToList()
-                                            .Select(x => new Model.ServerInfo()
-                                            {
-                                                ServiceID = x.ServiceID,
-                                                ServiceType = x.ServiceType,
-                                                PrimaryIP = x.PrimaryIP,
-                                                Location = x.Location,
-                                                YourReference = x.YourReference,
-                                                Status = x.Status,
-                                                Suspended = x.Suspended,
-                                            })
-                                            .ToList();
+                var apiClientServerDetailsResults = await GlobalSettings.
+                                                        apiClient
+                                                        .GetAllServerDetailsAsync(GlobalSettings.authInfo);
 
-                serverDetails = apiClientServerDetails;
+                var apiClientServerDetailsResultsConverted = apiClientServerDetailsResults
+                                                                .ToList()
+                                                                .Select(x => new Model.ServerInfo()
+                                                                {
+                                                                    ServiceID = x.ServiceID,
+                                                                    ServiceType = x.ServiceType,
+                                                                    PrimaryIP = x.PrimaryIP,
+                                                                    Location = x.Location,
+                                                                    YourReference = x.YourReference,
+                                                                    Status = x.Status,
+                                                                    Suspended = x.Suspended,
+                                                                })
+                                                                .ToList();
+
+                serverDetails = apiClientServerDetailsResultsConverted;
             }
 
             return serverDetails;
         }
 
-        public List<CurrentMonitorStatus> GetServerStatus(string serviceID)
+        public async Task<List<CurrentMonitorStatus>> GetServerStatus(string serviceID)
         {
             try
             {
-                return GlobalSettings.apiClient.GetServerStatus(GlobalSettings.authInfo, serviceID).ToList();
+                var serverStatuses = await GlobalSettings.apiClient.GetServerStatusAsync(GlobalSettings.authInfo, serviceID);
+
+                return serverStatuses.ToList();
             }
             catch(Exception ex)
             {
@@ -66,11 +77,11 @@ namespace MyServersWebApp.Data
             }
         }
 
-        public string SuspendServer(string serviceID, string suspensionReason)
+        public async Task<string> SuspendServer(string serviceID, string suspensionReason)
         {
             try
             {
-                GlobalSettings.apiClient.SuspendServer(GlobalSettings.authInfo, serviceID, suspensionReason);
+                await GlobalSettings.apiClient.SuspendServerAsync(GlobalSettings.authInfo, serviceID, suspensionReason);
                 return string.Empty;
             }
             catch(Exception ex)
@@ -79,11 +90,11 @@ namespace MyServersWebApp.Data
             }
         }
 
-        public string UnsuspendServer(string serviceID)
+        public async Task<string> UnsuspendServer(string serviceID)
         {
             try
             {
-                GlobalSettings.apiClient.UnsuspendServer(GlobalSettings.authInfo, serviceID);
+                await GlobalSettings.apiClient.UnsuspendServerAsync(GlobalSettings.authInfo, serviceID);
                 return string.Empty;
             }
             catch (Exception ex)

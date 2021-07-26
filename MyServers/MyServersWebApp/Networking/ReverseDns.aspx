@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ReverseDns.aspx.cs" Inherits="MyServersWebApp.Networking.ReverseDns" %>
+﻿<%@ Page Async="true" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ReverseDns.aspx.cs" Inherits="MyServersWebApp.Networking.ReverseDns" %>
 
 <asp:Content ID="PageBodyContent" ContentPlaceHolderID="MainContent" runat="Server">  
     <link rel="stylesheet" type="text/css" href="/Styles/jquery.dataTables.css">

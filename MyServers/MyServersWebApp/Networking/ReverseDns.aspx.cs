@@ -5,13 +5,13 @@ namespace MyServersWebApp.Networking
 {
     public partial class ReverseDns : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected async void Page_Load(object sender, EventArgs e)
         {
             Page.Title = "Reverse DNS";
 
-            var reverseDnsService = new ReverseDnsService();
+            var reverseDnsService = GlobalSettings.Container.GetInstance<IReverseDnsService>();
 
-            rptReverseDns.DataSource = reverseDnsService.GetReverseDnsEntries();
+            rptReverseDns.DataSource = await reverseDnsService.GetReverseDnsEntries();
             rptReverseDns.DataBind();
         }
     }

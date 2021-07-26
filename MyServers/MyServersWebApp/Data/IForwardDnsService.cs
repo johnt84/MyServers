@@ -1,10 +1,11 @@
 ﻿using MyServersWebApp.MyServersApiSimulatorService;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MyServersWebApp.Data
 {
     public interface IForwardDnsService
     {
-        List<HostedDomainInfo> GetForwardDnsDomains();
+        Task<List<HostedDomainInfo>> GetForwardDnsDomains();
     }
 }

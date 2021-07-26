@@ -6,13 +6,13 @@ namespace MyServersWebApp
 {
     public partial class ServerList : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected async void Page_Load(object sender, EventArgs e)
         {
             Page.Title = "Server List";
 
-            var serverService = new ServerService();
+            var serverService = GlobalSettings.Container.GetInstance<IServerService>();
 
-            rptServerList.DataSource = serverService.GetAllServerDetails();
+            rptServerList.DataSource = await serverService.GetAllServerDetails();
             rptServerList.DataBind();
         }
     }
