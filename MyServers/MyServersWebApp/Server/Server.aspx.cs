@@ -29,6 +29,8 @@ namespace MyServersWebApp.Server
 
             serverService = GlobalSettings.Container.GetInstance<IServerService>();
 
+            Page.RegisterAsyncTask(new PageAsyncTask(PopulatePageAsync));
+
             if (!Page.IsPostBack)
             {
                 await PopulatePageAsync();

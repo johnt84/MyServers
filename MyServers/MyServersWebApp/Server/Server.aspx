@@ -28,7 +28,6 @@
     }
    %>
 
-
     <div id="divMain" style="width: 1024px; font-size: 14px; padding-bottom: 20px" runat="server">
         <h1 style="padding-top: 20px"><%= Page.Title %></h1>
 
