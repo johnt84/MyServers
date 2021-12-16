@@ -55,7 +55,8 @@
     <script type="text/javascript">
         $("#datatableformat").dataTable({
             "bPaginate": false,
-            "ordering": true
+            "ordering": true,
+            "order": [[0, "asc"]]
         });
     </script>
 </asp:Content>
