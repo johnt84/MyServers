@@ -5,6 +5,13 @@
 
     <div style="width: 1024px; font-size: 14px;" runat="server">
         <h1 style="padding-top: 20px;"><%= Page.Title %></h1>
+
+        <div id="divError" Visible="false" style="color:red; padding-top: 20px; font-size: 18px;" padding-bottom: 20px">
+            <ul>
+                <li><asp:Label ID="lbErrorMessage" runat="server"></asp:Label></li>
+            </ul>
+        </div>
+
         <asp:Repeater ID="rptForwardDns" runat="server" ItemType="MyServersWebApp.MyServersApiSimulatorService.HostedDomainInfo">
             <HeaderTemplate>
                 <table id="datatableformat" class="table table-hover table-striped table-bordered no-wrap">
