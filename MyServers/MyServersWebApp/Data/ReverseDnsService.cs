@@ -7,7 +7,7 @@ namespace MyServersWebApp.Data
 {
     public class ReverseDnsService : IReverseDnsService
     {
-        public async Task<List<ReverseDnsEntry>> GetReverseDnsEntries()
+        public async Task<List<ReverseDnsEntry>> GetReverseDnsEntriesAsync()
         {
             var reverseDnsEntries = await GlobalSettings.apiClient.GetReverseDnsEntriesAsync(GlobalSettings.authInfo);
 

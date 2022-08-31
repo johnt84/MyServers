@@ -6,6 +6,6 @@ namespace MyServersWebApp.Data
 {
     public interface IForwardDnsService
     {
-        Task<List<HostedDomainInfo>> GetForwardDnsDomains();
+        Task<List<HostedDomainInfo>> GetForwardDnsDomainsAsync(); 
     }
 }

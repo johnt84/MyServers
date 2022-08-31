@@ -31,24 +31,12 @@ namespace MyServersWebApp.Server
 
             Page.RegisterAsyncTask(new PageAsyncTask(PopulatePageAsync));
 
-            if (!Page.IsPostBack)
-            {
-                await PopulatePageAsync();
-
-                if (string.IsNullOrEmpty(serverDetails.ServiceID))
-                {
-                    DisplayErrorMessage($"No server exists with the Service ID of {serviceID}");
-                    divMain.Visible = false;
-                    return;
-                }
-            }
-
             InitialisePage();
         }
 
         protected async void btnSuspendServer_Click(object sender, EventArgs e)
         {
-            string suspendResult = await serverService.SuspendServer(serviceID, txtSuspensionReason.Text);
+            string suspendResult = await serverService.SuspendServerAsync(serviceID, txtSuspensionReason.Text);
 
             if (!string.IsNullOrEmpty(suspendResult))
             {
@@ -64,7 +52,7 @@ namespace MyServersWebApp.Server
 
         protected async void btnUnsuspendServer_Click(object sender, EventArgs e)
         {
-            string unsuspendResult = await serverService.UnsuspendServer(serviceID);
+            string unsuspendResult = await serverService.UnsuspendServerAsync(serviceID);
 
             if(!string.IsNullOrEmpty(unsuspendResult))
             {
@@ -78,10 +66,32 @@ namespace MyServersWebApp.Server
 
         private async Task PopulatePageAsync()
         {
-            rptServerStatus.DataSource = await serverService.GetServerStatus(serviceID);
+            var serverStatuses = await serverService.GetServerStatusAsync(serviceID);
+
+            if (!Page.IsPostBack)
+            {
+                if ((serverStatuses?.Count ?? 0) == 0)
+                {
+                    DisplayErrorMessage($"No server exists with the Service ID of {serviceID}");
+                    divMain.Visible = false;
+                    return;
+                }
+            }
+
+            rptServerStatus.DataSource = serverStatuses;
             rptServerStatus.DataBind();
 
-            serverDetails = serverService.GetServerDetails(serviceID);
+            serverDetails = await serverService.GetServerDetailsAsync(serviceID);
+
+            if (!Page.IsPostBack)
+            {
+                if (string.IsNullOrEmpty(serverDetails.ServiceID))
+                {
+                    DisplayErrorMessage($"No server exists with the Service ID of {serviceID}");
+                    divMain.Visible = false;
+                    return;
+                }
+            }
 
             lbYourReference.Text = serverDetails.YourReference;
             lbLocation.Text = serverDetails.Location;

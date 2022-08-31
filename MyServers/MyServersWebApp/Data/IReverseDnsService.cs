@@ -6,6 +6,6 @@ namespace MyServersWebApp.Data
 {
     interface IReverseDnsService
     {
-        Task<List<ReverseDnsEntry>> GetReverseDnsEntries();
+        Task<List<ReverseDnsEntry>> GetReverseDnsEntriesAsync();
     }
 }
