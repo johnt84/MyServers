@@ -7,7 +7,7 @@ namespace MyServersWebApp.Data
 {
     public class ForwardDnsService : IForwardDnsService
     {
-        public async Task<List<HostedDomainInfo>> GetForwardDnsDomains()
+        public async Task<List<HostedDomainInfo>> GetForwardDnsDomainsAsync()
         {
             var forwardDnsDomains = await GlobalSettings.apiClient.GetForwardDnsDomainsAsync(GlobalSettings.authInfo);
 

@@ -16,13 +16,11 @@ namespace MyServersWebApp.Networking
             forwardDnsService = GlobalSettings.Container.GetInstance<IForwardDnsService>();
 
             Page.RegisterAsyncTask(new PageAsyncTask(PopulatePageAsync));
-
-            await PopulatePageAsync();
         }
 
         private async Task PopulatePageAsync()
         {
-            rptForwardDns.DataSource = await forwardDnsService.GetForwardDnsDomains();
+            rptForwardDns.DataSource = await forwardDnsService.GetForwardDnsDomainsAsync();
             rptForwardDns.DataBind();
         }
     }

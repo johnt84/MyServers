@@ -6,10 +6,10 @@ namespace MyServersWebApp.Data
 {
     public interface IServerService
     {
-        Task<List<Model.ServerInfo>> GetAllServerDetails();
-        Task<List<CurrentMonitorStatus>> GetServerStatus(string serviceID);
-        ServerInfo GetServerDetails(string serviceID);
-        Task<string> SuspendServer(string serviceID, string suspensionReason);
-        Task<string> UnsuspendServer(string serviceID);
+        Task<List<Model.ServerInfo>> GetAllServerDetailsAsync();
+        Task<List<CurrentMonitorStatus>> GetServerStatusAsync(string serviceID);
+        Task<ServerInfo> GetServerDetailsAsync(string serviceID);
+        Task<string> SuspendServerAsync(string serviceID, string suspensionReason);
+        Task<string> UnsuspendServerAsync(string serviceID);
     }
 }

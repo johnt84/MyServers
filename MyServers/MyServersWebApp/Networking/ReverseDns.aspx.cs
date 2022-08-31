@@ -16,13 +16,11 @@ namespace MyServersWebApp.Networking
             reverseDnsService = GlobalSettings.Container.GetInstance<IReverseDnsService>();
 
             Page.RegisterAsyncTask(new PageAsyncTask(PopulatePageAsync));
-
-            await PopulatePageAsync();
         }
 
         private async Task PopulatePageAsync()
         {
-            rptReverseDns.DataSource = await reverseDnsService.GetReverseDnsEntries();
+            rptReverseDns.DataSource = await reverseDnsService.GetReverseDnsEntriesAsync();
             rptReverseDns.DataBind();
         }
     }

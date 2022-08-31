@@ -16,13 +16,11 @@ namespace MyServersWebApp
             serverService = GlobalSettings.Container.GetInstance<IServerService>();
 
             Page.RegisterAsyncTask(new PageAsyncTask(PopulatePageAsync));
-
-            await PopulatePageAsync();
         }
 
         private async Task PopulatePageAsync()
         {
-            rptServerList.DataSource = await serverService.GetAllServerDetails();
+            rptServerList.DataSource = await serverService.GetAllServerDetailsAsync();
             rptServerList.DataBind();
         }
     }

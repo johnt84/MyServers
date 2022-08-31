@@ -17,7 +17,7 @@ namespace MyServersWebApp.Data
             _serverDBService = serverDBService;
         }
         
-        public async Task<List<Model.ServerInfo>> GetAllServerDetails()
+        public async Task<List<Model.ServerInfo>> GetAllServerDetailsAsync()
         {
             List<Model.ServerInfo> serverDetails;
 
@@ -51,7 +51,7 @@ namespace MyServersWebApp.Data
             return serverDetails;
         }
 
-        public async Task<List<CurrentMonitorStatus>> GetServerStatus(string serviceID)
+        public async Task<List<CurrentMonitorStatus>> GetServerStatusAsync(string serviceID)
         {
             try
             {
@@ -65,19 +65,19 @@ namespace MyServersWebApp.Data
             }
         }
 
-        public ServerInfo GetServerDetails(string serviceID)
+        public Task<ServerInfo> GetServerDetailsAsync(string serviceID)
         {
             try
             {
-                return GlobalSettings.apiClient.GetServerDetails(GlobalSettings.authInfo, serviceID);
+                return GlobalSettings.apiClient.GetServerDetailsAsync(GlobalSettings.authInfo, serviceID);
             }
             catch (Exception ex)
             {
-                return new ServerInfo();
+                return null;
             }
         }
 
-        public async Task<string> SuspendServer(string serviceID, string suspensionReason)
+        public async Task<string> SuspendServerAsync(string serviceID, string suspensionReason)
         {
             try
             {
@@ -90,7 +90,7 @@ namespace MyServersWebApp.Data
             }
         }
 
-        public async Task<string> UnsuspendServer(string serviceID)
+        public async Task<string> UnsuspendServerAsync(string serviceID)
         {
             try
             {
