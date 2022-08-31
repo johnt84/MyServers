@@ -5,8 +5,8 @@ namespace MyServersBlazorServerApp.Data
 {
     interface IServerService
     {
-        Task<ServerInfo[]> GetAllServerDetails();
-        Task<CurrentMonitorStatus[]> GetServerStatus(string serviceID);
-        Task<ServerInfo> GetServerDetails(string serviceID);
+        Task<ServerInfo[]> GetAllServerDetailsAsync();
+        Task<CurrentMonitorStatus[]> GetServerStatusAsync(string serviceID);
+        Task<ServerInfo> GetServerDetailsAsync(string serviceID);
     }
 }

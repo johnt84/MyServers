@@ -5,6 +5,6 @@ namespace MyServersBlazorServerApp.Data
 {
     interface IForwardDnsService
     {
-        Task<HostedDomainInfo[]> GetForwardDnsDomains();
+        Task<HostedDomainInfo[]> GetForwardDnsDomainsAsync();
     }
 }

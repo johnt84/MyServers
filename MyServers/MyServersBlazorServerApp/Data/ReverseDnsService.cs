@@ -12,7 +12,7 @@ namespace MyServersBlazorServerApp.Data
             _apiClient = apiClient;
         }
 
-        public async Task<ReverseDnsEntry[]> GetReverseDnsEntries()
+        public async Task<ReverseDnsEntry[]> GetReverseDnsEntriesAsync()
         {
             return await _apiClient.GetReverseDnsEntriesAsync(GlobalSettings.authInfo);
         }

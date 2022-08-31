@@ -12,7 +12,7 @@ namespace MyServersBlazorServerApp.Data
             _apiClient = apiClient;
         }
 
-        public async Task<HostedDomainInfo[]> GetForwardDnsDomains()
+        public async Task<HostedDomainInfo[]> GetForwardDnsDomainsAsync()
         {
             return await _apiClient.GetForwardDnsDomainsAsync(GlobalSettings.authInfo);
         }

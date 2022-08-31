@@ -52,6 +52,6 @@ else
 
     protected async override Task OnInitializedAsync()
     {
-        allServerDetails = await ServerService.GetAllServerDetails();
+        allServerDetails = await ServerService.GetAllServerDetailsAsync();
     }
 }

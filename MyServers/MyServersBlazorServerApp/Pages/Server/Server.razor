@@ -6,13 +6,13 @@
 
 <h2>Service Status</h2>
 
-@if (currentMonitorStatuses == null)
+@if (!pageInitialized)
 {
     <p><em>Loading...</em></p>
 }
-else if (!currentMonitorStatuses.Any())
+else if (!serviceExists)
 {
-    <p><em>There are currently no server statuses</em></p>
+    <p><em>No server exists with the Service ID of @ServiceID</em></p>
 }
 else
 {
@@ -73,10 +73,24 @@ else
 
     private CurrentMonitorStatus[] currentMonitorStatuses;
     private ServerInfo serverDetails;
+    bool pageInitialized = false;
+    private bool serviceExists = false;
 
     protected async override Task OnInitializedAsync()
     {
-        currentMonitorStatuses = await ServerService.GetServerStatus(ServiceID);
-        serverDetails = await ServerService.GetServerDetails(ServiceID);
+        pageInitialized = true;
+        
+        currentMonitorStatuses = await ServerService.GetServerStatusAsync(ServiceID);
+
+        serviceExists = (currentMonitorStatuses?.Length ?? 0) > 0;
+
+        if(!serviceExists)
+        {
+            return;
+        }
+
+        serverDetails = await ServerService.GetServerDetailsAsync(ServiceID);
+
+        serviceExists = !string.IsNullOrWhiteSpace(serverDetails.ServiceID ?? string.Empty);
     }
 }

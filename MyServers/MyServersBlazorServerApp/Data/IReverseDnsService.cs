@@ -5,6 +5,6 @@ namespace MyServersBlazorServerApp.Data
 {
     interface IReverseDnsService
     {
-        Task<ReverseDnsEntry[]> GetReverseDnsEntries();
+        Task<ReverseDnsEntry[]> GetReverseDnsEntriesAsync();
     }
 }
