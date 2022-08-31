@@ -36,6 +36,6 @@ else
 
     protected async override Task OnInitializedAsync()
     {
-        reverseDnsEntries = await ReverseDnsService.GetReverseDnsEntries();
+        reverseDnsEntries = await ReverseDnsService.GetReverseDnsEntriesAsync();
     }
 }

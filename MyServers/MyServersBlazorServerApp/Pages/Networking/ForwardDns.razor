@@ -46,6 +46,6 @@ else
 
     protected async override Task OnInitializedAsync()
     {
-        forwardDnsDomains = await ForwardDnsService.GetForwardDnsDomains();
+        forwardDnsDomains = await ForwardDnsService.GetForwardDnsDomainsAsync();
     }
 }

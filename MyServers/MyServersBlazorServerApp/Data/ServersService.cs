@@ -13,12 +13,12 @@ namespace MyServersBlazorServerApp.Data
             _apiClient = apiClient;
         }
 
-        public async Task<ServerInfo[]> GetAllServerDetails()
+        public async Task<ServerInfo[]> GetAllServerDetailsAsync()
         {
             return await _apiClient.GetAllServerDetailsAsync(GlobalSettings.authInfo);
         }
 
-        public async Task<CurrentMonitorStatus[]> GetServerStatus(string serviceID)
+        public async Task<CurrentMonitorStatus[]> GetServerStatusAsync(string serviceID)
         {
             try
             {
@@ -30,7 +30,7 @@ namespace MyServersBlazorServerApp.Data
             }
         }
 
-        public async Task<ServerInfo> GetServerDetails(string serviceID)
+        public async Task<ServerInfo> GetServerDetailsAsync(string serviceID)
         {
             try
             {
