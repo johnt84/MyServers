@@ -31,7 +31,7 @@ namespace MyServersBlazorServerApp
             };
 
             services.AddSingleton<MyServersApiClient>();
-            services.AddScoped<IServerService, ServersService>();
+            services.AddScoped<IServerService, ServerService>();
             services.AddScoped<IForwardDnsService, ForwardDnsService>();
             services.AddScoped<IReverseDnsService, ReverseDnsService>();
         }

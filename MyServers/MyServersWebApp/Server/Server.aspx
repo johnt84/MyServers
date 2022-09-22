@@ -53,10 +53,10 @@
                             <%# Item.StatusCode %>
                         </td>
                         <td>
-                            <a href="/server/monitorhistory/?serviceid=<%# serviceID %>&testid=<%# Item.TestId %>"><%# Item.TestName %></a>
+                            <a href="/server/monitorhistory?serviceid=<%# serviceID %>&testid=<%# Item.TestId %>"><%# Item.TestName %></a>
                         </td>
                         <td>
-                            <a href="/server/bandwidth/?serviceid=<%# serviceID %>"><%# serverDetails.BandwidthUrlBase %></a>
+                            <a href="/server/bandwidth?serviceid=<%# serviceID %>"><%# serverDetails.BandwidthUrlBase %></a>
                         </td>
                         <td>
                             <%# Item.TestArg1 %>

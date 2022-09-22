@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 
 namespace MyServersBlazorServerApp.Data
 {
-    public class ServersService : IServerService
+    public class ServerService : IServerService
     {
         private readonly MyServersApiClient _apiClient;
 
-        public ServersService(MyServersApiClient apiClient)
+        public ServerService(MyServersApiClient apiClient)
         {
             _apiClient = apiClient;
         }
@@ -39,6 +39,33 @@ namespace MyServersBlazorServerApp.Data
             catch (Exception ex)
             {
                 return new ServerInfo();
+            }
+        }
+
+
+        public async Task<string> SuspendServerAsync(string serviceID, string suspensionReason)
+        {
+            try
+            {
+                await _apiClient.SuspendServerAsync(GlobalSettings.authInfo, serviceID, suspensionReason);
+                return string.Empty;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public async Task<string> UnsuspendServerAsync(string serviceID)
+        {
+            try
+            {
+                await _apiClient.UnsuspendServerAsync(GlobalSettings.authInfo, serviceID);
+                return string.Empty;
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
             }
         }
     }
