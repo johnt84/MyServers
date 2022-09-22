@@ -1,7 +1,5 @@
 ﻿@page "/server/server/{ServiceID}"
 
-@using MyServersApiSimulatorService
-@using MyServersBlazorServerApp.Data
 @inject IServerService ServerService
 
 <h2>Service Status</h2>
@@ -12,14 +10,24 @@
 }
 else if (!serviceExists)
 {
-    <p><em>No server exists with the Service ID of @ServiceID</em></p>
+    <ErrorMessage ErrorMessageForDisplay="@errorMessage"></ErrorMessage>
 }
 else
 {
+    if (isError)
+    {
+        <ErrorMessage ErrorMessageForDisplay="@errorMessage"></ErrorMessage>
+    }
+    else if (isActionCompleted)
+    {
+        <ActionMessage ActionMessageForDisplay="@actionMessage"></ActionMessage>
+    }
+    
     <table class="table" style="width: 1024px;">
         <tr>
             <th style="width: 65px">Status Code</th>
             <th style="width: 90px">Test Name</th>
+            <th style="width: 125px">Bandwidth</th>
             <th style="width: 60px">Test Arg 1</th>
             <th style="width: 70px">Monitored Ip</th>
             <th style="width: 70px">Last Updated</th>
@@ -28,38 +36,68 @@ else
         {
             <tr>
                 <td>@currentMonitorStatus.StatusCode</td>
-                <td>@currentMonitorStatus.TestName </td>
+                <td>
+                    <a href="/server/monitorhistory?serviceid=@ServiceID&testid=@currentMonitorStatus.TestId">@currentMonitorStatus.TestName</a>
+                </td>
+                <td>
+                    <a href="/server/bandwidth?serviceid=@ServiceID">@serverDetails.BandwidthUrlBase</a>
+                 </td>
                 <td>@currentMonitorStatus.TestArg1</td>
                 <td>@currentMonitorStatus.MonitoredIp</td>
                 <td>@currentMonitorStatus.LastUpdated.ToString("dd-MMM-yyy")</td>
             </tr>
         }
     </table>
-}
 
-@if (!string.IsNullOrEmpty(serverDetails.ServiceID))
-{
-    <div class="left" style="padding-bottom: 20px">
-        <h2>Server Description</h2>
+    @if (!string.IsNullOrEmpty(serverDetails.ServiceID))
+    {
+        <div class="left" style="padding-bottom: 20px">
+            <h2>Server Description</h2>
 
-        <table>
-            <tr>
-                <td style="width: 125px;">Your Reference:</td>
-                <td>@serverDetails.YourReference</td>
-            </tr>
-            <tr>
-                <td>Location:</td>
-                <td>@serverDetails.Location</td>
-            </tr>
-            <tr>
-                <td>Primary IP:</td>
-                <td>@serverDetails.PrimaryIP</td>
-            </tr>
-            <tr>
-                <td>Is Suspended:</td>
-                <td>@(serverDetails.Suspended ? "Yes" : "No")</td>
-            </tr>
-        </table>
+            <table>
+                <tr>
+                    <td style="width: 125px;">Your Reference:</td>
+                    <td>@serverDetails.YourReference</td>
+                </tr>
+                <tr>
+                    <td>Location:</td>
+                    <td>@serverDetails.Location</td>
+                </tr>
+                <tr>
+                    <td>Primary IP:</td>
+                    <td>@serverDetails.PrimaryIP</td>
+                </tr>
+                <tr>
+                    <td>Is Suspended:</td>
+                    <td>@(serverDetails.Suspended ? "Yes" : "No")</td>
+                </tr>
+            </table>
+        </div>
+    }
+
+    <div style="padding-top: 10px; padding-bottom: 25px;">
+        @if (serverDetails.Suspended)
+        {
+            <button class="btn" type="button" @onclick="UnsuspendServerAsync">Unsuspend Server</button>
+        }
+        else
+        {
+            <table>
+                <tr>
+                    <td style="padding-right: 20px;">
+                        Suspension Reason:
+                    </td>
+                    <td>
+                        <input id="txtSuspensionReason" type="text" @bind-value="@suspensionReason" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn" type="button" @onclick="SuspendServerAsync">Suspend Server</button>
+                    </td>
+                </tr>
+            </table>
+        }
     </div>
 }
 
@@ -73,24 +111,75 @@ else
 
     private CurrentMonitorStatus[] currentMonitorStatuses;
     private ServerInfo serverDetails;
-    bool pageInitialized = false;
+    private bool pageInitialized = false;
     private bool serviceExists = false;
+    private string suspensionReason;
+
+    private bool isError = false;
+    private string errorMessage = string.Empty;
+
+    private bool isActionCompleted = false;
+    private string actionMessage = string.Empty;
 
     protected async override Task OnInitializedAsync()
     {
         pageInitialized = true;
-        
+
+        await PopulatePageAsync();
+    }
+
+    private async Task SuspendServerAsync()
+    {
+        string suspendResult = await ServerService.SuspendServerAsync(ServiceID, suspensionReason);
+
+        DisplayResult(suspendResult, true);
+
+        await PopulatePageAsync();
+    }
+
+
+    private async Task UnsuspendServerAsync()
+    {
+        string unsuspendResult = await ServerService.UnsuspendServerAsync(ServiceID);
+
+        DisplayResult(unsuspendResult, false);
+
+        await PopulatePageAsync();
+    }
+
+    private async Task PopulatePageAsync()
+    {
         currentMonitorStatuses = await ServerService.GetServerStatusAsync(ServiceID);
 
         serviceExists = (currentMonitorStatuses?.Length ?? 0) > 0;
 
-        if(!serviceExists)
+        if (!serviceExists)
         {
+            errorMessage = $"No server exists with the Service ID of {ServiceID}";
             return;
         }
 
         serverDetails = await ServerService.GetServerDetailsAsync(ServiceID);
 
         serviceExists = !string.IsNullOrWhiteSpace(serverDetails.ServiceID ?? string.Empty);
+    }
+
+    private void DisplayResult(string actionResult, bool isSuspendServer)
+    {
+        if (!string.IsNullOrWhiteSpace(actionResult))
+        {
+            isError = true;
+            isActionCompleted = false;
+            errorMessage = actionResult;
+        }
+        else
+        {
+            isActionCompleted = true;
+            isError = false;
+
+            string suspendedOrUnsuspended = isSuspendServer ? "suspended" : "unsuspended";
+
+            actionMessage = $"Server {suspendedOrUnsuspended} successfully";
+        }
     }
 }
